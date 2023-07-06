@@ -18,7 +18,8 @@
     "downlevelIteration": true,
     "incremental": true,
     "useUnknownInCatchVariables": false,
-    "baseUrl": "src"
+    "baseUrl": "src",
+    "allowImportingTsExtensions": true
   },
   "include": ["vite-env.d.ts", "**/*.ts", "**/*.tsx", "**/*"],
   "references": [{ "path": "./tsconfig.node.json" }]
