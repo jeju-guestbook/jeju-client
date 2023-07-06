@@ -72,3 +72,19 @@ hr {
   border: transparent;
   border-top: 1px solid #000;
 }
+
+#Wrapper {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+#MainContainer {
+  /* 임시 */
+  width: 24.375rem;
+  height: 100vh;
+  
+  background: #FFF;
+
+  color: #000; 
+}
