@@ -8,8 +8,15 @@ interface PostStore {
   locationData?: {
     x: number;
     y: number;
+    place_name: string;
+    address_name: string;
   };
-  setLocationData: (value: { x: number; y: number }) => void;
+  setLocationData: (value: {
+    x: number;
+    y: number;
+    place_name: string;
+    address_name: string;
+  }) => void;
   date: string;
   setDate: (value: string) => void;
   content: string;
@@ -35,11 +42,15 @@ const usePostStore = create<PostStore>((set) => ({
       ...state,
       date: value,
     })),
-
-  setLocationData: (value: { x: number; y: number }) =>
+  setLocationData: (value: {
+    x: number;
+    y: number;
+    place_name: string;
+    address_name: string;
+  }) =>
     set((state) => ({
       ...state,
-      location: value,
+      locationData: value,
     })),
   content: '',
   setContent: (value: string) =>

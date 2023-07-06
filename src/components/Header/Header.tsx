@@ -1,13 +1,18 @@
 import * as Style from './Header.style';
-import { useLocation } from 'react-router-dom';
 import HeaderRightBtn from './HeaderRightBtn';
-import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import BackIcon from '../icons/BackIcon';
+import { useNavigate } from 'react-router-dom';
 
 function Header() {
+  const navigate = useNavigate();
+
   return (
     <Style.HeaderBody>
-      <Style.HeaderIcon>
+      <Style.HeaderIcon
+        onClick={() => {
+          navigate(-1);
+        }}
+      >
         <BackIcon />
       </Style.HeaderIcon>
       <Style.HeaderText>방명록 모음</Style.HeaderText>

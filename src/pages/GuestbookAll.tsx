@@ -1,3 +1,4 @@
+import AddPostFloatBtn from "../components/AddPost/AddPostFloatBtn";
 import LogCompo from "../components/LogCompo";
 import * as Style from "./GuestbookAll.style";
 
@@ -8,6 +9,7 @@ function GuestbookAll() {
       <LogCompo />
       <LogCompo />
       <LogCompo />
+      <AddPostFloatBtn />
     </Style.Container>
   );
 }
