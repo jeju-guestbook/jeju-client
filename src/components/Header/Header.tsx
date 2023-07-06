@@ -7,7 +7,11 @@ import BackIcon from '../icons/BackIcon';
 function Header() {
   const location = useLocation();
 
+  console.log(location, 'location');
+
   const buttonText = getHeaderButtonText(location.pathname);
+
+  console.log(buttonText, 'buttonText');
 
   return (
     <Style.HeaderBody>

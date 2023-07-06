@@ -5,10 +5,10 @@ export const HeaderRightButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  width: 100%;
-  height: 100%;
+  padding: 1.13rem 1.13rem 1.19rem;
 
   font-family: 'Pretendard-Bold';
   font-size: 1rem;
   text-align: center;
+  color: #000;
 `;
