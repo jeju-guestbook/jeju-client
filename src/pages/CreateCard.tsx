@@ -6,7 +6,9 @@ import * as Style from "./CreateCard.style";
 function CreateCard() {
   return (
     <Style.Container>
-      <CreateCardLayout />
+      <div>
+        <CreateCardLayout />
+      </div>
       <Style.CreateCardTitle>
         <span>AI 생성&nbsp;</span>
         <span>랜덤 텍스트&nbsp;</span>

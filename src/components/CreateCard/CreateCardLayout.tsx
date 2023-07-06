@@ -6,13 +6,9 @@ import * as Style from "./CreateCardLayout.style";
 function CreateCardLayout() {
   return (
     <Style.CreateCardContainer>
-      <Style.CreateCardImg>
-        <img src={TestImg} alt={"TEST img"} />
-        <img src={TestImg} alt={"TEST img"} />
-      </Style.CreateCardImg>
-      <div>
       <CreateCardFrame />
-      </div>
+      <img src={TestImg} alt={"TEST img"} />
+      <img src={TestImg} alt={"TEST img"} />
     </Style.CreateCardContainer>
   );
 }

@@ -1,35 +1,5 @@
 import styled from "styled-components";
 
-export const CreateCardImg = styled.div`
-  --imgWidth: calc(100vw - (var(--defaultMargin) + 1.25rem) * 2);
-  
-  position: absolute;
-  z-index: 2;
-
-  width: var(--imgWidth);
-
-  & img {
-    border-radius: 5px;
-    
-    background: lightgray 50%;
-
-    object-fit: cover;
-  }
-
-  & img:nth-of-type(1) {
-    z-index: 5;
-
-    width: inherit;
-
-    filter: blur(2px);
-  }
-
-  & img:nth-of-type(2) {
-    width: calc(var(--imgWidth) - 1.25rem);
-    z-index: 10;
-  }
-`;
-
 export const CreateCardContainer = styled.div`
   --defaultMargin: 3.4375rem;
 
@@ -38,23 +8,34 @@ export const CreateCardContainer = styled.div`
   width: 100%;
   height: 25.125rem;
 
-  & img,
-  & div {
+  & svg {
+    width: 24.625rem;
+  }
+
+  & img {
     position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
+
+    background: lightgray 50%;
+
+    border-radius: 5px;
+    object-fit: cover;
   }
 
-  & div:nth-of-type(1){
-    top: 50%;
+  & img:nth-of-type(1) {
+    top: 1.25rem;
+    left: calc(var(--defaultMargin) + 1.25rem);
+
+    width: 15rem;
+    height: 21.25rem;
+
+    filter: blur(2px);
   }
 
-  & div:nth-of-type(2){
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  & img:nth-of-type(2) {
+    top: 2.5rem;
+    left: calc(var(--defaultMargin) + 2.5rem);
 
-    top: calc(50% + .25rem);
-    width: calc(100vw - (var(--defaultMargin) * 2));
+    width: 12.5rem;
+    height: 18.75rem;
   }
 `;
