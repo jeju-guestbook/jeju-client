@@ -1,11 +1,13 @@
-import AddPost from '../components/AddPost/AddPost';
-import * as Style from './GuestbookAll.style';
+import LogCompo from "../components/LogCompo";
+import * as Style from "./GuestbookAll.style";
 
 function GuestbookAll() {
   return (
     <Style.Container>
-      HIHI
-      <AddPost />
+      <LogCompo />
+      <LogCompo />
+      <LogCompo />
+      <LogCompo />
     </Style.Container>
   );
 }
