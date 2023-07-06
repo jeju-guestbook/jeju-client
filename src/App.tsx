@@ -1,16 +1,16 @@
-import GuestbookAll from "./pages/GuestbookAll";
-import { Route, Routes, useLocation } from "react-router-dom";
-import AddPostLocationPage from "./pages/AddPostLocationPage";
-import Header from "./components/Header/Header";
-import AddPostPage from "./pages/AddPostPage";
+import GuestbookAll from './pages/GuestbookAll';
+import { Route, Routes, useLocation } from 'react-router-dom';
+import AddPostLocationPage from './pages/AddPostLocationPage';
+import Header from './components/Header/Header';
+import AddPostPage from './pages/AddPostPage';
 // import Navbar from "./components/Navbar/Navbar";
-import CreateCard from "./pages/CreateCard";
-import showCommons from "./lib/utils/showCommons";
-import Submitted from "./pages/Submitted";
+import CreateCard from './pages/CreateCard';
+import showCommons from './lib/utils/showCommons';
+import Submitted from './pages/Submitted';
 
 function App() {
   const location = useLocation();
-
+  const d = '';
   return (
     <div id="Wrapper">
       <div id="MainContainer">
