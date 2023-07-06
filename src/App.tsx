@@ -6,6 +6,7 @@ import AddPostPage from "./pages/AddPostPage";
 // import Navbar from "./components/Navbar/Navbar";
 import CreateCard from "./pages/CreateCard";
 import showCommons from "./lib/utils/showCommons";
+import Submitted from "./pages/Submitted";
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
           ></Route>
           <Route path="/addpost" element={<AddPostPage />} />
           <Route path="/createcard/:createcardId" element={<CreateCard />} />
+          <Route path="/submitted" element={<Submitted />} />
         </Routes>
         {/* {showCommons(location.pathname) && <Navbar />} */}
       </div>

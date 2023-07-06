@@ -14,6 +14,9 @@ const getRouteType = (path: string) => {
     case RoutePath.CREATE_CARD: {
       return 'createcard'
     }
+    case RoutePath.SUBMITTED: {
+      return 'submitted'
+    }
     default:
       return '';
   }
