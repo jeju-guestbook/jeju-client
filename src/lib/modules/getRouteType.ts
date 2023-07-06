@@ -4,7 +4,7 @@ const getRouteType = (path: string) => {
   let pathRes = path;
 
   if (path.includes('createcard')) {
-    pathRes = '/createcard'
+    pathRes = '/createcard';
   }
 
   switch (pathRes) {
@@ -12,10 +12,13 @@ const getRouteType = (path: string) => {
       return 'addPostLocation';
     }
     case RoutePath.CREATE_CARD: {
-      return 'createcard'
+      return 'createcard';
     }
     case RoutePath.SUBMITTED: {
-      return 'submitted'
+      return 'submitted';
+    }
+    case RoutePath.ADD_POST: {
+      return 'addPost';
     }
     default:
       return '';
