@@ -9,7 +9,7 @@ function Navbar() {
   const NavItems = [
     { icons: null, text: "지도", value: "/map" },
     { icons: null, text: "방명록", value: "/guestbookall" },
-    { icons: null, text: "우표", value: "/postcard" },
+    { icons: null, text: "우표", value: "/createcard" },
   ];
 
   return (
