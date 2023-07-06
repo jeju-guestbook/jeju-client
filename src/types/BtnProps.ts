@@ -1,4 +1,4 @@
-export interface BottomBtnProps {
+export interface BtnProps {
     content: string;
     handler: any;
 }

@@ -51,4 +51,15 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  & div {
+    position: relative;
+    z-index: 3;
+  }
+
+  #CreateCard {
+    top:-10.5rem;
+
+    transform: scaleX(-1); 
+  }
 `;

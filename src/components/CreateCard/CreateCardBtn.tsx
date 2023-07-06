@@ -1,8 +1,12 @@
-import { CreateCardBtnProps } from "../../types/CreateCard"
-import * as Style from "./CreateCardBtn.style"
+import { BtnProps } from "../../types/BtnProps";
+import * as Style from "./CreateCardBtn.style";
 
-function CreateCardBtn(props:CreateCardBtnProps) {
-    return <Style.BtnContainer>{props.context}</Style.BtnContainer>
+function CreateCardBtn(props: BtnProps) {
+  return (
+    <Style.BtnContainer onClick={props.handler}>
+      {props.content}
+    </Style.BtnContainer>
+  );
 }
 
-export default CreateCardBtn
+export default CreateCardBtn;

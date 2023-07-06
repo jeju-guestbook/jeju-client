@@ -3,12 +3,16 @@ import * as Style from "./Confirm.style";
 import ConfirmImg from "../public/ConfirmImg.png";
 import BackgroundConfirm from "../public/Background/BackgroundConfirm.png";
 import BottomBtn from "../components/BottomBtn/BottomBtn";
-import { BottomBtnProps } from "../types/BottomBtn";
+import { BtnProps } from "../types/BtnProps";
+import { useNavigate } from "react-router-dom";
 
 function Confirm() {
-  const btnProps: BottomBtnProps = {
+  const navigate = useNavigate();
+  const btnProps: BtnProps = {
     content: "우표 만들러가기",
-    handler: null,
+    handler: () => {
+      navigate(`/createcard/${1}`);
+    },
   };
 
   return (
