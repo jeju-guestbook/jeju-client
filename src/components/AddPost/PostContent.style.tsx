@@ -7,7 +7,7 @@ export const PostContentDiv = styled.div`
   justify-content: center;
 `;
 
-export const PostImgLabel = styled.label<{ src: string }>`
+export const PostImgLabel = styled.label<{ src?: string }>`
   width: 21.25rem;
   height: 21.25rem;
 

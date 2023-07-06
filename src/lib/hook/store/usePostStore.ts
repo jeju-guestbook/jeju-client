@@ -1,7 +1,7 @@
 import { create } from 'zustand';
 
 interface PostStore {
-  imageUrl: string;
+  imageUrl?: string;
   setImageUrl: (value: string) => void;
   imageFile: File | null;
   setImageFile: (value: File) => void;
