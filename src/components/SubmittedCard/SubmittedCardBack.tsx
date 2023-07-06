@@ -1,11 +1,11 @@
 import * as Style from "./SubmittedCardBack.style";
 
-function SubmittedCardBack() {
-  return (
-    <Style.BackContainer>
-      안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요안녕하세요
-    </Style.BackContainer>
-  );
+interface CardbackProps {
+  content: string;
+}
+
+function SubmittedCardBack({ content }: CardbackProps) {
+  return <Style.BackContainer>{content}</Style.BackContainer>;
 }
 
 export default SubmittedCardBack;
