@@ -3,9 +3,9 @@ import RoutePath from '../const/RoutePath';
 const getHeaderButtonText = (path: string) => {
   switch (path) {
     case RoutePath.GUESTBOOK_ALL:
+      return '';
+    case RoutePath.ADD_POST:
       return '올리기';
-    case RoutePath.ADD_POST_LOCATION:
-      return '다음';
     default:
       return '';
   }

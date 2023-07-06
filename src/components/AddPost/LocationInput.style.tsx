@@ -1,13 +1,21 @@
 import styled from 'styled-components';
 
 export const LocationInputWrapDiv = styled.div`
-  padding: 0 1.5625rem;
   margin-top: 3.75rem;
 
   .LocationLabel {
+    position: relative;
     display: flex;
     flex-direction: column;
+    justify-content: flex-end;
     gap: 1.125rem;
+  }
+
+  .SearchIcon {
+    position: absolute;
+
+    margin: calc(0.75rem);
+    margin-bottom: calc(0.75rem + 0.0625rem);
   }
 
   .LocationInput {
@@ -16,9 +24,11 @@ export const LocationInputWrapDiv = styled.div`
 
     padding: 1rem 1rem 1rem 2.75rem;
 
-    border-radius: 5px;
-    border: 1px solid var(--4-fill-gray-ae-inactive, #aeaeae);
+    border: none;
+    border-bottom: 1px solid var(--4-fill-gray-ae-inactive, #aeaeae);
     background: var(--1-white-f-default, #fff);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
+
+    color: #000;
   }
 `;
