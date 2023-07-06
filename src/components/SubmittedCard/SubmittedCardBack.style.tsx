@@ -5,6 +5,7 @@ export const BackDate = styled.div`
 
   margin-bottom: 1.1875rem;
 
+  color: #111;
   font-family: "Pretendard-Medium";
   font-size: 1rem;
   line-height: 1.125rem;

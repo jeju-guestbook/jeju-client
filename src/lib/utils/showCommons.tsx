@@ -1,11 +1,11 @@
-import getRouteType from "../modules/getRouteType"
+import getRouteType from "../modules/getRouteType";
 
 const showCommons = (path: string) => {
-    if (getRouteType(path) === 'createcard') {
-        return false
-    }
+  if (getRouteType(path) === "createcard" || getRouteType(path) === "confirm") {
+    return false;
+  }
 
-    return true
-}
+  return true;
+};
 
-export default showCommons
+export default showCommons;
