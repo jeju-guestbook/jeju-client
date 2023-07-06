@@ -1,16 +1,18 @@
 import styled from "styled-components";
 
 export const BtnContainer = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: .75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
 
-    margin-top: 1.875rem;
-`
+  margin-top: 1.5rem;
+`;
 
 export const PostCardText = styled.div`
-  width: 15rem;
+  min-width: 15rem;
+  width: 100%;
+  padding: 0 4.6875rem;
 
   font-size: 1.125rem;
   line-height: 1.875rem;
@@ -18,14 +20,26 @@ export const PostCardText = styled.div`
 `;
 
 export const PostCardTitle = styled.div`
-  margin: 1.625rem 0 0.75rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  font-size: 1.125rem;
-  line-height: 1.625rem;
+  margin: 1.1875rem 0 0.75rem 0;
+
+  font-size: 1.5rem;
+  line-height: 2rem;
   color: #404040;
 
   & span:first-of-type {
     font-family: "Pretendard-Bold";
+  }
+
+  & span:nth-of-type(3) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
   }
 `;
 
@@ -37,8 +51,4 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  & svg {
-    margin: 0 3.4375rem;
-  }
 `;
