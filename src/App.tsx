@@ -23,7 +23,7 @@ function App() {
           <Route path="/addpost" element={<AddPostPage />} />
           <Route path="/postcard/:postcardId" element={<PostCard />} />
         </Routes>
-        {showCommons(location.pathname) && <Navbar />}
+        {/* {showCommons(location.pathname) && <Navbar />} */}
       </div>
     </div>
   );
