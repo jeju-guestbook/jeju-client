@@ -7,6 +7,7 @@ import AddPostPage from './pages/AddPostPage';
 import CreateCard from './pages/CreateCard';
 import showCommons from './lib/utils/showCommons';
 import Submitted from './pages/Submitted';
+import MapPage from './pages/MapPage';
 
 function App() {
   const location = useLocation();
@@ -16,6 +17,7 @@ function App() {
       <div id="MainContainer">
         {showCommons(location.pathname) && <Header />}
         <Routes>
+          <Route path="/" element={<MapPage />}></Route>
           <Route path="/guestbookall" element={<GuestbookAll />} />
           <Route
             path="/addpostlocation"
