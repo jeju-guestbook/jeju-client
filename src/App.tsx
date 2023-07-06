@@ -5,6 +5,7 @@ function App() {
   return (
     <div id="Wrapper">
       <div id="MainContainer">
+        <Header />
         <GuestbookAll />
       </div>
     </div>

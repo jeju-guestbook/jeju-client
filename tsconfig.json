@@ -21,6 +21,6 @@
     "baseUrl": "src",
     "allowImportingTsExtensions": true
   },
-  "include": ["vite-env.d.ts", "**/*.ts", "**/*.tsx", "**/*"],
+  "include": ["vite-env.d.ts", "**/*.ts", "**/*.tsx", "**/*", "custom.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
