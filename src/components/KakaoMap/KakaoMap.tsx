@@ -1,13 +1,15 @@
-import React, { useId } from 'react';
+import React, { useEffect, useId } from 'react';
 import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import initValue from '../../lib/const/initValue';
 import dummyMarkers from './MockUpLocation';
 import listShuffle from '../../lib/utils/listShuffle';
 import { useNavigate } from 'react-router-dom';
+import useLoaderStore from '../../lib/hook/store/useLoaderStore';
 
 export let kakaoUseMap: kakao.maps.Map;
 
 const KakaoMap = () => {
+  // const { setIsLoading } = useLoaderStore();
   return (
     <Map
       center={{
@@ -51,8 +53,8 @@ const Item = ({ poiData }: ItemProps) => {
   const image = {
     src: '/Marker.svg',
     size: {
-      width: 26,
-      height: 22.48,
+      width: 30,
+      height: 40,
     },
   };
 

@@ -1,9 +1,6 @@
 import React, { MouseEventHandler } from 'react';
-import {
-  HeaderRightButton,
-  HeaderRightButtonDummyDiv,
-} from './HeaderRightBtn.style';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { HeaderRightButton } from './HeaderRightBtn.style';
+import { useLocation } from 'react-router-dom';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import getRouteType from '../../lib/modules/getRouteType';
@@ -41,7 +38,8 @@ const HeaderRightBtn = () => {
           locationData: ${locationData?.place_name || ''}`
         );
       } else {
-        alert(`모든 항목을 입력해주세요. 
+        alert(`
+        모든 항목을 입력해주세요. 
         imageFile: ${imageFile ? 'true' : 'false'} 
         date: ${date}
         content: ${content}
@@ -52,12 +50,10 @@ const HeaderRightBtn = () => {
 
   return (
     <>
-      {buttonText ? (
+      {buttonText && (
         <HeaderRightButton type="button" onClick={onClick}>
           {buttonText}
         </HeaderRightButton>
-      ) : (
-        <HeaderRightButtonDummyDiv></HeaderRightButtonDummyDiv>
       )}
     </>
   );

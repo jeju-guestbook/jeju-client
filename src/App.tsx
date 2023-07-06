@@ -8,10 +8,14 @@ import CreateCard from './pages/CreateCard';
 import showCommons from './lib/utils/showCommons';
 import Submitted from './pages/Submitted';
 import MapPage from './pages/MapPage';
+import Loader from './components/Loader/Loader';
+import LandingPopup from './components/LandingPopup/LandingPopup';
+import useLandingStore from './lib/hook/store/useLandingStore';
 
 function App() {
   const location = useLocation();
-  const d = '';
+  const { setIsLanding } = useLandingStore();
+
   return (
     <div id="Wrapper">
       <div id="MainContainer">
@@ -28,6 +32,8 @@ function App() {
           <Route path="/submitted" element={<Submitted />} />
         </Routes>
         {/* {showCommons(location.pathname) && <Navbar />} */}
+        <Loader />
+        <LandingPopup />
       </div>
     </div>
   );

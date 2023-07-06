@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const HeaderRightButton = styled.button`
+  position: absolute;
+
   display: flex;
   justify-content: center;
   align-items: center;
