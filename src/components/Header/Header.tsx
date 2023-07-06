@@ -1,8 +1,8 @@
-import { ReactComponent as BackIcon } from './icons/backIcon.svg';
 import * as Style from './Header.style';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import HeaderRightBtn from './HeaderRightBtn';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
+import BackIcon from '../icons/BackIcon';
 
 function Header() {
   const location = useLocation();

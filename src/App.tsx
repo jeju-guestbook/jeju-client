@@ -1,7 +1,7 @@
 import GuestbookAll from './pages/GuestbookAll';
-import Header from './components/Header';
 import { Route, Routes } from 'react-router-dom';
 import AddPostLocation from './pages/AddPostLocation';
+import Header from './components/Header/Header';
 
 function App() {
   return (
