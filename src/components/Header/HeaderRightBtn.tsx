@@ -1,17 +1,20 @@
 import React, { MouseEventHandler } from 'react';
 import { HeaderRightButton } from './HeaderRightBtn.style';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import getRouteType from '../../lib/modules/getRouteType';
+import getHeaderNextButtonText from '../../lib/modules/getHeaderNextButtonText';
 
 const HeaderRightBtn = () => {
   const { locationData, imageFile, date, content } = usePostStore();
 
+  const navigate = useNavigate();
   const location = useLocation();
   const buttonText = getHeaderButtonText(location.pathname);
+  const buttonNextText= getHeaderNextButtonText(location.pathname);
 
-  const onClick: MouseEventHandler = (e) => {
+  const upload: MouseEventHandler = (e) => {
     const routeType = getRouteType(location.pathname);
 
     if (routeType === 'addPost') {
@@ -30,7 +33,7 @@ const HeaderRightBtn = () => {
 
       if (imageFile && date && content && locationData) {
         // TODO: API 호출후 성공하면 createPost 로 보내주기
-        // navigate('/');
+        navigate('/submitted');
         alert(
           `imageFile: ${imageFile ? 'true' : 'false'} 
           date: ${date}
@@ -48,12 +51,19 @@ const HeaderRightBtn = () => {
     }
   };
 
+  const moveCreateCard = () => {
+    navigate('/confirm')
+  }
+
   return (
     <>
       {buttonText && (
-        <HeaderRightButton type="button" onClick={onClick}>
+        <HeaderRightButton type="button" onClick={upload}>
           {buttonText}
         </HeaderRightButton>
+      )}
+      {buttonNextText && (
+        <HeaderRightButton type='button' onClick={moveCreateCard} className='Submitted'>다음</HeaderRightButton>
       )}
     </>
   );

@@ -20,7 +20,7 @@ function Header() {
           navigate(-1);
         }}
       >
-        <BackIcon />
+        {(location.pathname !== '/') && <BackIcon />}
       </Style.HeaderIcon>
       {domainText && <Style.HeaderText>{domainText}</Style.HeaderText>}
       {routeType === 'map' && <Logo />}

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const HeaderIcon = styled.div`
   position: relative;
@@ -11,13 +11,13 @@ export const HeaderIcon = styled.div`
   top: 1rem;
   left: 1.0831rem;
 
-  font-family: 'Pretendard-Bold';
+  font-family: "Pretendard-Bold";
   font-size: 1rem;
   text-align: center;
 `;
 
 export const HeaderText = styled.div`
-  font-family: 'Pretendard-Bold';
+  font-family: "Pretendard-Bold";
   font-size: 1.125rem;
   text-align: center;
 `;
