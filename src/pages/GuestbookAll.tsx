@@ -1,4 +1,4 @@
-import LogCompo from "../components/LogCompo";
+import LogCompo from "../components/LogCompo/LogCompo";
 import * as Style from "./GuestbookAll.style";
 
 function GuestbookAll() {

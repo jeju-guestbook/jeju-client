@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { getNavItem } from "../lib/modules/getNavItem";
+import { getNavItem } from "../../lib/modules/getNavItem";
 import * as Style from "./Navbar.style";
 import { useNavigate } from "react-router-dom";
 

@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import AddPostLocationPage from './pages/AddPostLocationPage';
 import Header from './components/Header/Header';
 import AddPostPage from './pages/AddPostPage';
-import Navbar from './components/Navbar';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (

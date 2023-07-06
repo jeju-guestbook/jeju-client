@@ -1,6 +1,6 @@
 import * as Style from "./LogCompo.style";
 
-import TestImg from "../public/TestImg.png";
+import TestImg from "../../public/TestImg.png";
 
 function LogCompo() {
   return (
