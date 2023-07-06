@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const HeaderIcon = styled.div`
   display: flex;
@@ -30,4 +30,9 @@ export const HeaderBody = styled.div`
   height: 3.5rem;
 
   border-bottom: #d0d8de solid 1px;
+
+  .Logo {
+    width: 5.4375rem;
+    height: 2rem;
+  }
 `;

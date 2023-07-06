@@ -1,8 +1,15 @@
 import styled from 'styled-components';
 
 export const LocationSearchListDiv = styled.div`
+  overflow-y: scroll;
+
   display: flex;
   flex-direction: column;
+
+  max-height: 16.2175rem;
+
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
 `;
 
 export const LocationSearchButtonWrapDiv = styled.div`
@@ -29,5 +36,21 @@ export const LocationSearchButton = styled.button`
 
   background-color: #efe6fd;
 
-  text-align: left;
+  .PlaceName {
+    color: #6c6c6c;
+    font-family: Pretendard;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1rem;
+    letter-spacing: -0.0187rem;
+  }
+
+  color: #6c6c6c;
+  font-family: Pretendard;
+  font-size: 0.625rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+  letter-spacing: -0.0156rem;
 `;

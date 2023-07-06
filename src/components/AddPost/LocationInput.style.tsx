@@ -29,6 +29,12 @@ export const LocationInputWrapDiv = styled.div`
     background: var(--1-white-f-default, #fff);
     /* box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25); */
 
-    color: #000;
+    color: #6b6b6b;
+    font-family: Pretendard;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.125rem;
+    letter-spacing: -0.0219rem;
   }
 `;

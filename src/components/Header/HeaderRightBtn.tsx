@@ -1,5 +1,8 @@
 import React, { MouseEventHandler } from 'react';
-import { HeaderRightButton } from './HeaderRightBtn.style';
+import {
+  HeaderRightButton,
+  HeaderRightButtonDummyDiv,
+} from './HeaderRightBtn.style';
 import { useLocation, useNavigate } from 'react-router-dom';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
@@ -13,8 +16,6 @@ const HeaderRightBtn = () => {
 
   const onClick: MouseEventHandler = (e) => {
     const routeType = getRouteType(location.pathname);
-
-    console.log(routeType, 'routeType');
 
     if (routeType === 'addPost') {
       const temp1 = imageFile;
@@ -50,9 +51,15 @@ const HeaderRightBtn = () => {
   };
 
   return (
-    <HeaderRightButton type="button" onClick={onClick}>
-      {buttonText}
-    </HeaderRightButton>
+    <>
+      {buttonText ? (
+        <HeaderRightButton type="button" onClick={onClick}>
+          {buttonText}
+        </HeaderRightButton>
+      ) : (
+        <HeaderRightButtonDummyDiv></HeaderRightButtonDummyDiv>
+      )}
+    </>
   );
 };
 

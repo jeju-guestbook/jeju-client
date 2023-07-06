@@ -14,7 +14,7 @@ export const AddPostLabel = styled.label`
   background-color: #6002ee;
 
   border-radius: 5px;
-  border: 1px solid #6002ee;
+  /* border: 1px solid #6002ee; */
   background: rgba(96, 2, 238, 0.1);
 
   color: #6002ee;

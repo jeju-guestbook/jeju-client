@@ -10,6 +10,10 @@ const LocationInput = () => {
 
   const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
+    if (!e.target.value) {
+      setKeywordSearchData(undefined);
+      return;
+    }
     const result = await kakaoReq.localKeywordSearch(e.target.value);
 
     setKeywordSearchData(result.data);

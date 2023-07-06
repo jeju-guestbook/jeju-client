@@ -20,6 +20,9 @@ const getRouteType = (path: string) => {
     case RoutePath.ADD_POST: {
       return 'addPost';
     }
+    case RoutePath.MAP: {
+      return 'map';
+    }
     default:
       return '';
   }

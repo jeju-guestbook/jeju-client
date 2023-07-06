@@ -14,3 +14,7 @@ export const HeaderRightButton = styled.button`
   text-align: center;
   color: #000;
 `;
+
+export const HeaderRightButtonDummyDiv = styled.div`
+  padding: 1.13rem 1.13rem 1.19rem;
+`;

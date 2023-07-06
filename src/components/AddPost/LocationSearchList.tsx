@@ -11,7 +11,6 @@ import { useNavigate } from 'react-router-dom';
 
 const LocationSearchList = () => {
   const { keywordSearchData } = useKeywordSearchStore();
-  const { locationData } = usePostStore();
   return (
     <LocationSearchListDiv>
       {keywordSearchData?.documents.map((item, index) => {
