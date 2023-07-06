@@ -13,7 +13,7 @@ function CreateCard() {
   const goMain:BtnProps = {
     content: "처음으로",
     handler:()=>{
-      navigate('/map')
+      navigate('/')
     }
   }
 
