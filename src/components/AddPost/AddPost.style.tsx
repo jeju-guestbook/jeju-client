@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const AddPostInput = styled.input`
+export const AddPostLabel = styled.label`
   position: fixed;
   z-index: 9999;
   bottom: 0.9375rem;
@@ -9,7 +9,15 @@ const AddPostInput = styled.input`
   width: 3rem;
   height: 3rem;
 
-  background-color: #ccc;
+  background-image: url(/AddPostIcon.svg);
+  border-radius: 50%;
+
+  opacity: 1;
 `;
 
-export default AddPostInput;
+export const AddPostInput = styled.input`
+  width: 3rem;
+  height: 3rem;
+
+  opacity: 0;
+`;
