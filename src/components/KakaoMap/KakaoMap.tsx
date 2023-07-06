@@ -3,6 +3,7 @@ import { Map, MapMarker } from 'react-kakao-maps-sdk';
 import initValue from '../../lib/const/initValue';
 import dummyMarkers from './MockUpLocation';
 import listShuffle from '../../lib/utils/listShuffle';
+import { useNavigate } from 'react-router-dom';
 
 export let kakaoUseMap: kakao.maps.Map;
 
@@ -45,6 +46,8 @@ interface ItemProps {
 }
 
 const Item = ({ poiData }: ItemProps) => {
+  const navigate = useNavigate();
+
   const image = {
     src: '/Marker.svg',
     size: {
@@ -60,6 +63,9 @@ const Item = ({ poiData }: ItemProps) => {
         lng: poiData.lng,
       }}
       image={image}
+      onClick={() => {
+        navigate('/guestbookall');
+      }}
     />
   );
 };

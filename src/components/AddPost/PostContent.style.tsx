@@ -13,10 +13,11 @@ export const PostImgLabel = styled.label<{ src?: string }>`
 
   opacity: 1;
 
+  border: ${({ src }) => (src ? 'none' : '1px solid #D4CFD7')};
   border-radius: 0.3125rem;
 
-  background-image: url(${({ src }) => src});
-  background-size: cover;
+  background-image: url(${({ src }) => (src ? src : '/AddPostIcon.svg')});
+  background-size: ${({ src }) => (src ? 'cover' : '3rem 3rem')};
   background-repeat: no-repeat;
   background-position: center center;
 
