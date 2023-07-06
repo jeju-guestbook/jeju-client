@@ -1,10 +1,10 @@
 import React from 'react';
-import { AddPostInputWrapDiv } from './AddPostLocation.style';
+import { LocationInputWrapDiv } from './LocationInput.style';
 
-const AddPostLocation = () => {
+const LocationInput = () => {
   const [value, setValue] = React.useState('');
   return (
-    <AddPostInputWrapDiv>
+    <LocationInputWrapDiv>
       <label className="LocationLabel">
         어디로 다녀오셨나요?
         <input
@@ -17,8 +17,8 @@ const AddPostLocation = () => {
           }}
         />
       </label>
-    </AddPostInputWrapDiv>
+    </LocationInputWrapDiv>
   );
 };
 
-export default AddPostLocation;
+export default LocationInput;

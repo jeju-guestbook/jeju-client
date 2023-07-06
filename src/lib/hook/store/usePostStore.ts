@@ -5,6 +5,11 @@ interface PostStore {
   setImageUrl: (value: string) => void;
   imageFile: File | null;
   setImageFile: (value: File) => void;
+  locationData?: {
+    x: number;
+    y: number;
+  };
+  setLocationData: (value: { x: number; y: number }) => void;
   date: string;
   setDate: (value: string) => void;
   content: string;
@@ -29,6 +34,12 @@ const usePostStore = create<PostStore>((set) => ({
     set((state) => ({
       ...state,
       date: value,
+    })),
+
+  setLocationData: (value: { x: number; y: number }) =>
+    set((state) => ({
+      ...state,
+      location: value,
     })),
   content: '',
   setContent: (value: string) =>

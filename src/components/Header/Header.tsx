@@ -5,21 +5,13 @@ import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import BackIcon from '../icons/BackIcon';
 
 function Header() {
-  const location = useLocation();
-
-  console.log(location, 'location');
-
-  const buttonText = getHeaderButtonText(location.pathname);
-
-  console.log(buttonText, 'buttonText');
-
   return (
     <Style.HeaderBody>
       <Style.HeaderIcon>
         <BackIcon />
       </Style.HeaderIcon>
       <Style.HeaderText>방명록 모음</Style.HeaderText>
-      <HeaderRightBtn text={buttonText} />
+      <HeaderRightBtn />
     </Style.HeaderBody>
   );
 }

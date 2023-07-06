@@ -1,7 +1,8 @@
 import GuestbookAll from './pages/GuestbookAll';
 import { Route, Routes } from 'react-router-dom';
-import AddPostLocation from './pages/AddPostLocation';
+import AddPostLocationPage from './pages/AddPostLocationPage';
 import Header from './components/Header/Header';
+import AddPostPage from './pages/AddPostPage';
 
 function App() {
   return (
@@ -10,7 +11,11 @@ function App() {
         <Header />
         <Routes>
           <Route path="/guestbookall" element={<GuestbookAll />} />
-          <Route path="/addpostlocation" element={<AddPostLocation />}></Route>
+          <Route
+            path="/addpostlocation"
+            element={<AddPostLocationPage />}
+          ></Route>
+          <Route path="/addpost" element={<AddPostPage />}></Route>
         </Routes>
       </div>
     </div>

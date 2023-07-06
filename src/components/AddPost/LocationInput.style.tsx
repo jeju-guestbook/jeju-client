@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const AddPostInputWrapDiv = styled.div`
+export const LocationInputWrapDiv = styled.div`
   padding: 0 1.5625rem;
   margin-top: 3.75rem;
 
