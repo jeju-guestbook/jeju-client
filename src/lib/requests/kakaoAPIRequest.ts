@@ -1,10 +1,11 @@
+import initValue from '../const/initValue';
 import { kakaoInstanceClient } from './axiosClient';
 
 const kakaoReq = {
   localKeywordSearch: (keyword: string) => {
     const url = `https://dapi.kakao.com/v2/local/search/keyword.json?query=${keyword}`;
     const headers = {
-      Authorization: `KakaoAK ${import.meta.env.VITE_KAKAO_API_KEY as string}`,
+      Authorization: `KakaoAK ${initValue.apiKey}`,
     };
 
     const response = kakaoInstanceClient.request<LocalKeywordSearchResponse>({
