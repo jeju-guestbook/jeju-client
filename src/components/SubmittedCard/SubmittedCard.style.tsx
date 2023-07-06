@@ -7,6 +7,7 @@ export const SubmittedFooter = styled.div`
   font-size: 1rem;
   line-height: 1.125rem;
   text-align: center;
+  color: #111;
 `;
 
 export const SubmittedCardContainer = styled.div`

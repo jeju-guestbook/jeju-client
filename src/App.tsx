@@ -8,6 +8,7 @@ import CreateCard from './pages/CreateCard';
 import showCommons from './lib/utils/showCommons';
 import Submitted from './pages/Submitted';
 import MapPage from './pages/MapPage';
+import Confirm from './pages/Confirm';
 
 function App() {
   const location = useLocation();
@@ -26,6 +27,7 @@ function App() {
           <Route path="/addpost" element={<AddPostPage />} />
           <Route path="/createcard/:createcardId" element={<CreateCard />} />
           <Route path="/submitted" element={<Submitted />} />
+          <Route path="/confirm" element={<Confirm />} />
         </Routes>
         {/* {showCommons(location.pathname) && <Navbar />} */}
       </div>

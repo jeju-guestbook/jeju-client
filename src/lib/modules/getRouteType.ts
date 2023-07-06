@@ -23,6 +23,9 @@ const getRouteType = (path: string) => {
     case RoutePath.MAP: {
       return 'map';
     }
+    case RoutePath.CONFIRM: {
+      return 'confirm';
+    }
     default:
       return '';
   }

@@ -5,6 +5,7 @@ const RoutePath = {
   CREATE_CARD: '/createcard' as const,
   SUBMITTED: '/submitted' as const,
   MAP: '/' as const,
+  CONFIRM: '/confirm' as const,
 };
 
 export default RoutePath;

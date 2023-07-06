@@ -10,3 +10,8 @@ export interface SubmittedCardProps {
   imageFile: File | null;
   date: string;
 }
+
+export interface SubmittedBackProps {
+  content: string;
+  date: string;
+}
