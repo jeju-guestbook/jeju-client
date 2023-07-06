@@ -1,6 +1,6 @@
 import React from 'react';
 import AddPostInput from './AddPost.style';
-import usePostStore from 'lib/hook/store/usePostStore';
+import usePostStore from '../../lib/hook/store/usePostStore';
 
 const AddPost = () => {
   const { imageUrl, setImageFile, setImageUrl } = usePostStore();
@@ -28,7 +28,7 @@ const AddPost = () => {
       accept="image/*"
       value={imageUrl}
       onChange={onChange}
-    ></AddPostInput>
+    />
   );
 };
 
