@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const PostCardImg = styled.div`
+export const CreateCardImg = styled.div`
   --imgWidth: calc(100vw - (var(--defaultMargin) + 1.25rem) * 2);
   
   position: absolute;
@@ -30,7 +30,7 @@ export const PostCardImg = styled.div`
   }
 `;
 
-export const PostCardContainer = styled.div`
+export const CreateCardContainer = styled.div`
   --defaultMargin: 3.4375rem;
 
   position: relative;

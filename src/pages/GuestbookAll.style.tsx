@@ -9,7 +9,7 @@ export const Container = styled.div`
   gap: 0.875rem;
 
   width: 100%;
-  height: calc(100vh - 3.5rem - 3.25rem);
+  height: calc(100vh - 3.5rem);
   overflow: auto;
   padding: 0.625rem 0.875rem;
 
