@@ -1,10 +1,22 @@
 import styled from "styled-components";
 
+export const BackDate = styled.div`
+  width: 100%;
+
+  margin-bottom: 1.1875rem;
+
+  font-family: "Pretendard-Medium";
+  font-size: 1rem;
+  line-height: 1.125rem;
+  text-align: center;
+  letter-spacing: normal;
+`;
+
 export const BackContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
   width: 20.875rem;
   height: 40rem;

@@ -8,7 +8,7 @@ import { changeSubmitted } from "../lib/modules/changeSubmited";
 import SharingIcon from "../components/icons/SharingIcon";
 import KakaoIcon from "../public/kakaoIcon.png";
 import usePostStore from "../lib/hook/store/usePostStore";
-import { SubmittedCardProps } from "../types/Submitted";
+import { SubmittedBackProps, SubmittedCardProps } from "../types/Submitted";
 
 function Submitted() {
   const { imageUrl, imageFile, date, content } = usePostStore();
@@ -19,6 +19,11 @@ function Submitted() {
     imageFile: imageFile,
     date: date,
   };
+  
+  const cardBackInfo:SubmittedBackProps = {
+    content: content,
+    date: date
+  }
 
   return (
     <Style.SubmittedContainer
@@ -26,7 +31,7 @@ function Submitted() {
     >
       <div>
         {isClicked ? (
-          <SubmittedCardBack content={content} />
+          <SubmittedCardBack {...cardBackInfo}/>
         ) : (
           <SubmittedCard {...cardInfo}/>
         )}

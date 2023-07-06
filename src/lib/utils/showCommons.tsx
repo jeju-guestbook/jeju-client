@@ -1,7 +1,7 @@
 import getRouteType from "../modules/getRouteType"
 
 const showCommons = (path: string) => {
-    if (getRouteType(path) === 'createcard' || getRouteType(path) === 'submitted') {
+    if (getRouteType(path) === 'createcard') {
         return false
     }
 

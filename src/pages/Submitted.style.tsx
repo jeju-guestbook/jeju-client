@@ -22,7 +22,7 @@ export const SubmittedContainer = styled.div`
     align-items: center;
 
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh - 3.5rem);
 
     padding: 0 1.75rem;
 `
