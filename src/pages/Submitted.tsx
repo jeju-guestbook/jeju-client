@@ -9,38 +9,49 @@ import SharingIcon from "../components/icons/SharingIcon";
 import KakaoIcon from "../public/kakaoIcon.png";
 import usePostStore from "../lib/hook/store/usePostStore";
 import { SubmittedBackProps, SubmittedCardProps } from "../types/Submitted";
+import BackgroundSubmitted from "../public/Background/BackgroundSubmitted.png"
 
 function Submitted() {
   const { imageUrl, imageFile, date, content } = usePostStore();
   const [isClicked, setIsClicked] = useState(false);
 
-  const cardInfo:SubmittedCardProps = {
+  const cardInfo: SubmittedCardProps = {
     imageUrl: imageUrl,
     imageFile: imageFile,
     date: date,
   };
-  
-  const cardBackInfo:SubmittedBackProps = {
+
+  const cardBackInfo: SubmittedBackProps = {
     content: content,
-    date: date
-  }
+    date: date,
+  };
 
   return (
     <Style.SubmittedContainer
       onClick={() => changeSubmitted({ isClicked, setIsClicked })}
     >
       <div>
-        {isClicked ? (
-          <SubmittedCardBack {...cardBackInfo}/>
-        ) : (
-          <SubmittedCard {...cardInfo}/>
-        )}
+        <div>
+          {isClicked ? (
+            <SubmittedCardBack {...cardBackInfo} />
+          ) : (
+            <SubmittedCard {...cardInfo} />
+          )}
+        </div>
+
+        <Style.SharingBtnGroup>
+          <SharingIcon />
+          <img src={KakaoIcon} alt="kakao Sharing" />
+        </Style.SharingBtnGroup>
       </div>
 
-      <Style.SharingBtnGroup>
-        <SharingIcon />
-        <img src={KakaoIcon} alt="kakao Sharing" />
-      </Style.SharingBtnGroup>
+      
+      <img
+        src={BackgroundSubmitted}
+        alt="background"
+        id="Submitted"
+        className="BackgroundGradient"
+      />
     </Style.SubmittedContainer>
   );
 }

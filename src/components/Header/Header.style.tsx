@@ -21,6 +21,9 @@ export const HeaderText = styled.div`
 `;
 
 export const HeaderBody = styled.div`
+  position: relative;
+  z-index: 10;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,6 +31,8 @@ export const HeaderBody = styled.div`
   padding: 1rem 1.0831rem;
 
   height: 3.5rem;
+
+  background: #fff;
 
   border-bottom: #d0d8de solid 1px;
 

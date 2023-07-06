@@ -9,8 +9,8 @@ export const SharingBtnGroup = styled.div`
 
     margin-top: 2.3125rem;
 
-    & *{
-        width: 2.125rem;
+    & * {
+        width: 3rem;
         cursor: pointer;
     }
 `
@@ -25,4 +25,13 @@ export const SubmittedContainer = styled.div`
     height: calc(100vh - 3.5rem);
 
     padding: 0 1.75rem;
+
+    & div {
+        position: relative;
+        z-index: 3;
+    }
+
+    & #Submitted {
+        top: 0;
+    }
 `

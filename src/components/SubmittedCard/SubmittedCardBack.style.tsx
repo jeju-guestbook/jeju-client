@@ -19,10 +19,14 @@ export const BackContainer = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  width: 20.875rem;
-  height: 40rem;
+  width: 90vw;
+  height: 75vh;
+  max-width: 20.875rem;
+  max-height: 40rem;
 
   padding: 0 1.0625rem;
+
+  background-color: #fff;
 
   font-size: 1.125rem;
   line-height: 1.875rem;
