@@ -5,6 +5,10 @@ export const HeaderIcon = styled.div`
   justify-content: center;
   align-items: center;
 
+  position: absolute;
+  top: 1rem;
+  left: 1.0831rem;
+
   font-family: 'Pretendard-Bold';
   font-size: 1rem;
   text-align: center;
@@ -18,7 +22,7 @@ export const HeaderText = styled.div`
 
 export const HeaderBody = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   padding: 1rem 1.0831rem;

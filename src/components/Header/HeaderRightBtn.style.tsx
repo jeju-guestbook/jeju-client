@@ -5,7 +5,9 @@ export const HeaderRightButton = styled.button`
   justify-content: center;
   align-items: center;
 
-  padding: 1.13rem 1.13rem 1.19rem;
+  position: absolute;
+  top: 1.125rem;
+  right: 1.0831rem;
 
   font-family: 'Pretendard-Bold';
   font-size: 1rem;
