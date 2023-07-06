@@ -18,7 +18,6 @@
     "downlevelIteration": true,
     "incremental": true,
     "useUnknownInCatchVariables": false,
-    "baseUrl": "src",
     "allowImportingTsExtensions": true
   },
   "include": ["vite-env.d.ts", "**/*.ts", "**/*.tsx", "**/*", "custom.d.ts"],

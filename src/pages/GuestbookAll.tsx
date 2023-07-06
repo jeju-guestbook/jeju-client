@@ -1,7 +1,13 @@
-import * as Style from "./GuestbookAll.style"
+import AddPost from '../components/AddPost/AddPost';
+import * as Style from './GuestbookAll.style';
 
 function GuestbookAll() {
-    return <Style.Container>HIHI</Style.Container>
+  return (
+    <Style.Container>
+      HIHI
+      <AddPost />
+    </Style.Container>
+  );
 }
 
 export default GuestbookAll;
