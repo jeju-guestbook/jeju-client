@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import { AddPostInput, AddPostLabel } from './AddPostBtn.style';
 import { useNavigate } from 'react-router-dom';
+import useDidMountEffect from '../../lib/hook/useDidMountEffect';
 
 const AddPostBtn = () => {
   const { imageUrl, imageFile, setImageFile, setImageUrl } = usePostStore();
@@ -27,7 +28,7 @@ const AddPostBtn = () => {
     };
   };
 
-  useEffect(() => {
+  useDidMountEffect(() => {
     if (imageFile && imageUrl) {
       navigate('/addpostlocation');
     }
