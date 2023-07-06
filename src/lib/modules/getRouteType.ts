@@ -1,9 +1,18 @@
 import RoutePath from '../const/RoutePath';
 
 const getRouteType = (path: string) => {
-  switch (path) {
+  let pathRes = path
+
+  if (path.includes('postcard')) {
+    pathRes = '/postcard'
+  }
+  
+  switch (pathRes) {
     case RoutePath.ADD_POST_LOCATION: {
       return 'addPostLocation';
+    }
+    case RoutePath.POSTCARD: {
+      return 'postcard'
     }
     default:
       return '';
