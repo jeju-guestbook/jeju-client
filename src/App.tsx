@@ -3,9 +3,10 @@ import { Route, Routes, useLocation } from "react-router-dom";
 import AddPostLocationPage from "./pages/AddPostLocationPage";
 import Header from "./components/Header/Header";
 import AddPostPage from "./pages/AddPostPage";
-import Navbar from "./components/Navbar/Navbar";
-import PostCard from "./pages/PostCard";
+// import Navbar from "./components/Navbar/Navbar";
+import CreateCard from "./pages/CreateCard";
 import showCommons from "./lib/utils/showCommons";
+import Submitted from "./pages/Submitted";
 
 function App() {
   const location = useLocation();
@@ -21,7 +22,8 @@ function App() {
             element={<AddPostLocationPage />}
           ></Route>
           <Route path="/addpost" element={<AddPostPage />} />
-          <Route path="/postcard/:postcardId" element={<PostCard />} />
+          <Route path="/createcard/:createcardId" element={<CreateCard />} />
+          <Route path="/submitted" element={<Submitted />} />
         </Routes>
         {/* {showCommons(location.pathname) && <Navbar />} */}
       </div>

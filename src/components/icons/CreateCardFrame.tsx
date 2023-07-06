@@ -1,6 +1,6 @@
 import React from "react";
 
-function PostCardFrame() {
+function CreateCardFrame() {
   return (
     <svg
       width="292"
@@ -56,4 +56,4 @@ function PostCardFrame() {
   );
 }
 
-export default PostCardFrame;
+export default CreateCardFrame;

@@ -9,7 +9,7 @@ export const BtnContainer = styled.div`
   margin-top: 1.5rem;
 `;
 
-export const PostCardText = styled.div`
+export const CreateCardText = styled.div`
   min-width: 15rem;
   width: 100%;
   padding: 0 4.6875rem;
@@ -19,7 +19,7 @@ export const PostCardText = styled.div`
   letter-spacing: -0.0281rem;
 `;
 
-export const PostCardTitle = styled.div`
+export const CreateCardTitle = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
