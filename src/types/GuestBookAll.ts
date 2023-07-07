@@ -4,7 +4,7 @@ export interface GuestbookResponse {
   createdBy: null | string;
   image: string;
   photoCreatedAt: string;
-  userText: string;
+  user_text: string;
 }
 
 export interface GuestbookAddRequest {
