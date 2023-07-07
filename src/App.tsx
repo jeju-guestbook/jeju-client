@@ -11,11 +11,9 @@ import MapPage from './pages/MapPage';
 import Confirm from './pages/Confirm';
 import Loader from './components/Loader/Loader';
 import LandingPopup from './components/LandingPopup/LandingPopup';
-import useLandingStore from './lib/hook/store/useLandingStore';
 
 function App() {
   const location = useLocation();
-  const { setIsLanding } = useLandingStore();
 
   return (
     <div id="Wrapper">

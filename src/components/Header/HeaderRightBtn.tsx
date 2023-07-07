@@ -1,12 +1,13 @@
-import React, { MouseEventHandler } from "react";
-import { HeaderRightButton } from "./HeaderRightBtn.style";
-import { useLocation, useNavigate } from "react-router-dom";
-import usePostStore from "../../lib/hook/store/usePostStore";
-import getHeaderButtonText from "../../lib/modules/getHeaderButtonText";
-import getRouteType from "../../lib/modules/getRouteType";
-import getHeaderNextButtonText from "../../lib/modules/getHeaderNextButtonText";
-import { GuestbookAddRequest } from "../../types/GuestBookAll";
-import { axiosAddPost } from "../../lib/utils/axiosAddPost";
+import React, { MouseEventHandler } from 'react';
+import { HeaderRightButton } from './HeaderRightBtn.style';
+import { useLocation, useNavigate } from 'react-router-dom';
+import usePostStore from '../../lib/hook/store/usePostStore';
+import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
+import getRouteType from '../../lib/modules/getRouteType';
+import getHeaderNextButtonText from '../../lib/modules/getHeaderNextButtonText';
+import { GuestbookAddRequest } from '../../types/GuestBookAll';
+import { axiosAddPost } from '../../lib/utils/axiosAddPost';
+import req from '../../lib/requests/apiRequest';
 
 const HeaderRightBtn = () => {
   const { locationData, imageFile, date, content } = usePostStore();
@@ -16,10 +17,10 @@ const HeaderRightBtn = () => {
   const buttonText = getHeaderButtonText(location.pathname);
   const buttonNextText = getHeaderNextButtonText(location.pathname);
 
-  const upload: MouseEventHandler = (e) => {
+  const upload: MouseEventHandler = async (e) => {
     const routeType = getRouteType(location.pathname);
 
-    if (routeType === "addPost") {
+    if (routeType === 'addPost') {
       const temp1 = imageFile;
       const temp2 = date;
       const temp3 = content;
@@ -31,46 +32,22 @@ const HeaderRightBtn = () => {
         temp3,
         temp4,
       };
-      console.log(asd, "formData");
+      console.log(asd, 'formData');
       if (imageFile && date && content) {
-      // if (imageFile && date && content && locationData) {
+        // if (imageFile && date && content && locationData) {
         // TODO: API 호출후 성공하면 createPost 로 보내주기
-        const postBody: GuestbookAddRequest = {
-        datetime: date,
-        image: imageFile,
-        userText: content,
-      };
-
-      console.log(postBody);
-
-      axiosAddPost(postBody)
-        .then((res) => {
-          console.log(res);
-        })
-        .catch((err) => {
-          console.log(err);
+        // 성공했어요
+        const result = await req.postCreate({
+          datetime: date,
+          image: imageFile,
+          user_text: content,
         });
-        // navigate("/submitted");
-
-        alert(
-          `imageFile: ${imageFile ? "true" : "false"} 
-          date: ${date}
-          content: ${content}
-          locationData: ${locationData?.place_name || ""}`
-        );
-      } else {
-        alert(`
-        모든 항목을 입력해주세요. 
-        imageFile: ${imageFile ? "true" : "false"} 
-        date: ${date}
-        content: ${content}
-        locationData: ${locationData?.place_name || ""}`);
       }
     }
   };
 
   const moveCreateCard = () => {
-    navigate("/confirm");
+    navigate('/confirm');
   };
 
   return (
