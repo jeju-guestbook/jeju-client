@@ -10,17 +10,17 @@ import { useNavigate } from "react-router-dom";
 function CreateCard() {
   const navigate = useNavigate();
 
-  const goMain:BtnProps = {
+  const goMain: BtnProps = {
     content: "처음으로",
-    handler:()=>{
-      navigate('/')
-    }
-  }
+    handler: () => {
+      navigate("/");
+    },
+  };
 
-  const sharingCard:BtnProps = {
-    content:"우표 보내기",
-    handler:()=>{}
-  }
+  const sharingCard: BtnProps = {
+    content: "우표 보내기",
+    handler: () => {},
+  };
 
   return (
     <Style.Container>
