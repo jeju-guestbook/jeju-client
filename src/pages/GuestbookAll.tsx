@@ -4,6 +4,7 @@ import LogCompo from '../components/LogCompo/LogCompo';
 import * as Style from './GuestbookAll.style';
 import { axiosGuestList } from '../lib/utils/axiosGuestList';
 import { GuestbookResponse } from '../types/GuestBookAll';
+import { testGuestBookList } from '../lib/const/constant';
 
 function GuestbookAll() {
   // const [logList, setLogList] = useState<
@@ -25,12 +26,12 @@ function GuestbookAll() {
   //   });
   // }, []);
 
-  console.log(logList, 'logListlogList');
+  // console.log(logList, 'logListlogList');
 
   return (
     <Style.Container>
       <>
-        {logList.map((elem, idx) => {
+        {testGuestBookList.map((elem, idx) => {
           return (
             <LogCompo
               key={idx}
