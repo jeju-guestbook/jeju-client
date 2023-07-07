@@ -8,11 +8,9 @@ export interface GuestbookResponse {
 }
 
 export interface GuestbookAddRequest {
-    bookId: number;
     datetime: string;
-    x: number;
-    y: number;
-    // image:
+    image: any;
+    userText:string;
 }
  
 export interface GuestbookAddResponse {
