@@ -6,24 +6,24 @@ import { axiosGuestList } from '../lib/utils/axiosGuestList';
 import { GuestbookResponse } from '../types/GuestBookAll';
 
 function GuestbookAll() {
-  const [logList, setLogList] = useState<
-    {
-      createdAt: string;
-      createdBy: string;
-      id: number;
-      image: string;
-      photoCreatedAt: string;
-      user_text: string;
-    }[]
-  >([]);
+  // const [logList, setLogList] = useState<
+  //   {
+  //     createdAt: string;
+  //     createdBy: string;
+  //     id: number;
+  //     image: string;
+  //     photoCreatedAt: string;
+  //     user_text: string;
+  //   }[]
+  // >([]);
 
-  useEffect(() => {
-    axiosGuestList(1).then((res) => {
-      console.log(res, 'aefhuf');
-      if (res === undefined) return;
-      setLogList(res);
-    });
-  }, []);
+  // useEffect(() => {
+  //   axiosGuestList(1).then((res) => {
+  //     console.log(res, 'aefhuf');
+  //     if (res === undefined) return;
+  //     setLogList(res);
+  //   });
+  // }, []);
 
   console.log(logList, 'logListlogList');
 
