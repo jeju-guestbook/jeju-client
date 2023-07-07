@@ -1,11 +1,12 @@
-import React from "react";
+import React from 'react';
 
-function SharingIcon() {
+function SharingIcon(props: { onClick: () => void }) {
   return (
     <svg
       viewBox="0 0 34 34"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      onClick={props.onClick}
     >
       <g id="&#240;&#159;&#166;&#134; icon &#34;share round&#34;">
         <g id="Group">
