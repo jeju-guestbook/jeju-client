@@ -8,6 +8,7 @@ export const LandingPopupDiv = styled.div`
   width: 100vw;
   height: 100vh;
 
+  background-color: #fff;
   background-image: url(/Jeju.svg);
   background-size: cover;
   background-repeat: no-repeat;
