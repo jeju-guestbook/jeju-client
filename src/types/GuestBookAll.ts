@@ -1,17 +1,16 @@
-export interface GuestbookListResponse {
-    bookId:number;
-    imgS3Url: string;
-    text: string;
-    userId: string;
-    userProfileImg:string;
+export interface GuestbookResponse {
+    id:number;
+    createdAt:string;
+    createdBy: null|string;
+    image: string;
+    photoCreatedAt: string;
+    userText: string;
 }
 
 export interface GuestbookAddRequest {
-    bookId: number;
     datetime: string;
-    x: number;
-    y: number;
-    // image:
+    image: any;
+    userText:string;
 }
  
 export interface GuestbookAddResponse {

@@ -15,6 +15,10 @@ export const HeaderRightButton = styled.button`
   font-size: 1rem;
   text-align: center;
   color: #000;
+
+  &.Submitted {
+    color: #6002EE;
+  }
 `;
 
 export const HeaderRightButtonDummyDiv = styled.div`
