@@ -9,6 +9,7 @@ import dayjs from 'dayjs';
 import utc from 'dayjs/plugin/utc';
 import timezone from 'dayjs/plugin/timezone';
 import DatePicker from '../icons/DatePicker';
+import resizeImage from '../../lib/modules/resizeImage';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
@@ -45,9 +46,18 @@ const PostContent = () => {
     const reader = new FileReader();
     reader.readAsDataURL(imgFile);
 
-    reader.onload = () => {
-      setImageUrl(reader.result as string);
-      setImageFile(imgFile);
+    reader.onload = async (e) => {
+      const { resizedDataUrl, resizedFile } = await resizeImage({
+        src: e.target?.result as string,
+        name: imgFile.name,
+        type: imgFile.type,
+        lastModified: imgFile.lastModified,
+        x: 340,
+        y: 340,
+      });
+
+      setImageUrl(resizedDataUrl);
+      setImageFile(resizedFile);
     };
   };
 

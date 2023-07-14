@@ -3,6 +3,7 @@ import usePostStore from '../../lib/hook/store/usePostStore';
 import { AddPostInput, AddPostLabel } from './AddPostBtn.style';
 import { useNavigate } from 'react-router-dom';
 import useDidMountEffect from '../../lib/hook/useDidMountEffect';
+import resizeImage from '../../lib/modules/resizeImage';
 
 const AddPostBtn = () => {
   const { imageUrl, imageFile, setImageFile, setImageUrl } = usePostStore();
@@ -22,9 +23,18 @@ const AddPostBtn = () => {
     const reader = new FileReader();
     reader.readAsDataURL(imgFile);
 
-    reader.onload = () => {
-      setImageUrl(reader.result as string);
-      setImageFile(imgFile);
+    reader.onload = async (e) => {
+      const { resizedDataUrl, resizedFile } = await resizeImage({
+        src: e.target?.result as string,
+        name: imgFile.name,
+        type: imgFile.type,
+        lastModified: imgFile.lastModified,
+        x: 340,
+        y: 340,
+      });
+
+      setImageUrl(resizedDataUrl);
+      setImageFile(resizedFile);
     };
   };
 
