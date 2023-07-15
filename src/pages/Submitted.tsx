@@ -6,15 +6,12 @@ import SubmittedCard from "../components/SubmittedCard/SubmittedCard";
 import SubmittedCardBack from "../components/SubmittedCard/SubmittedCardBack";
 import { changeSubmitted } from "../lib/modules/changeSubmited";
 
-import SharingIcon from "../components/icons/SharingIcon";
-import KakaoIcon from "../public/kakaoIcon.png";
-import usePostStore from "../lib/hook/store/usePostStore";
-import { SubmittedBackProps, SubmittedCardProps } from "../types/Submitted";
-import BackgroundSubmitted from "../public/Background/BackgroundSubmitted.png";
-import BottomBtn from "../components/BottomBtn/BottomBtn";
-import { BtnProps } from "../types/BtnProps";
-import SaveBtn from "../components/icons/SaveBtn";
-
+import SharingIcon from '../components/icons/SharingIcon';
+import KakaoIcon from '../public/kakaoIcon.png';
+import usePostStore from '../lib/hook/store/usePostStore';
+import { SubmittedBackProps, SubmittedCardProps } from '../types/Submitted';
+import BackgroundSubmitted from '../public/Background/BackgroundSubmitted.png';
+import ImgSave from '../components/ImgSave/ImgSave';
 function Submitted() {
   const { imageUrl, imageFile, date, content } = usePostStore();
   const [isClicked, setIsClicked] = useState(false);
@@ -36,11 +33,9 @@ function Submitted() {
   // };
 
   return (
-    <Style.SubmittedContainer
-      onClick={() => changeSubmitted({ isClicked, setIsClicked })}
-    >
+    <Style.SubmittedContainer>
       <div>
-        <div>
+        <div onClick={() => changeSubmitted({ isClicked, setIsClicked })}>
           {isClicked ? (
             <SubmittedCardBack {...cardBackInfo} />
           ) : (
@@ -97,6 +92,7 @@ function Submitted() {
         id="Submitted"
         className="BackgroundGradient"
       />
+      <ImgSave />
     </Style.SubmittedContainer>
   );
 }
