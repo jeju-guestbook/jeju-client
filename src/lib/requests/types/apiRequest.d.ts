@@ -17,8 +17,6 @@ interface GuestBookItem {
   book_id: number;
   img_s3_url: string;
   text: string;
-  user_id?: string;
-  user_profile_img?: string;
 }
 
 interface CreateGuestBookReq {
@@ -30,6 +28,7 @@ interface CreateGuestBookReq {
 interface CreateGuestBookRes extends ApiRequestCommon {
   result: {
     book_id: number;
+    img_s3_url: string;
   };
 }
 
@@ -40,6 +39,7 @@ interface CreatePostReq {
 interface CreatePostRes extends ApiRequestCommon {
   result: {
     gen_id: number;
+    img_s3_url: string;
   };
 }
 
