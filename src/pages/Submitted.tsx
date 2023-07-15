@@ -29,11 +29,6 @@ function Submitted() {
     date: date,
   };
 
-  // const submittedBottom: BtnProps = {
-  //   content: <><SaveBtn />저장하기</>,
-  //   handler: () => {},
-  // };
-
   return (
     <Style.SubmittedContainer>
       <div>
@@ -57,7 +52,6 @@ function Submitted() {
               });
             }}
           />
-          {/* <img src="/test.jpeg"></img> */}
         </Style.SharingBtnGroup>
       </div>
 
