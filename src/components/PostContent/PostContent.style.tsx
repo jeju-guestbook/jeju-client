@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const PostContentDiv = styled.div`
   display: grid;
@@ -64,8 +64,8 @@ export const PostContentForm = styled.form`
     border: 1px solid rgba(38, 16, 54, 0.2);
 
     color: #767676;
-    font-size: 1rem;
-    font-family: "Pretendard-Regular";
+    font-size: 1.125rem;
+    font-family: 'Pretendard-Regular';
   }
 
   .PostTextArea {
@@ -79,13 +79,13 @@ export const PostContentForm = styled.form`
     resize: none;
 
     color: #111;
-    font-family: "Pretendard-Regular";
-    font-size: 1.125rem;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
   }
 
   textarea::placeholder {
     color: #d9d9d9;
-    font-family: "Pretendard-Regular";
-    font-size: 1.125rem;
+    font-family: 'Pretendard-Regular';
+    font-size: 1.25rem;
   }
 `;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { AddPostPageDiv } from './AddPost.style';
-import PostContent from '../components/AddPost/PostContent';
+import PostContent from '../components/PostContent/PostContent';
 
 const AddPostPage = () => {
   return (
