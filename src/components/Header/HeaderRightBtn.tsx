@@ -45,7 +45,7 @@ const HeaderRightBtn = () => {
           // TODO: API 호출후 성공하면 createPost 로 보내주기
 
           if (imageFile && date && content && locationData) {
-            const result = await req.postCreate({
+            const result = await req.createGuestBook({
               datetime: date,
               image: imageFile,
               user_text: content,
