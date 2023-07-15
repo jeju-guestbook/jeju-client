@@ -1,15 +1,16 @@
 import styled from "styled-components";
 
 export const CreateCardContainer = styled.div`
-  --defaultMargin: 3.4375rem;
+  /* --defaultMargin: 3.4375rem; */
 
   position: relative;
 
-  width: 100%;
   height: 25.125rem;
 
   & svg {
-    width: 24.625rem;
+    position: relative;
+    /* left: 55px; */
+    width: 17.75rem;
   }
 
   & img {
@@ -22,8 +23,9 @@ export const CreateCardContainer = styled.div`
   }
 
   & img:nth-of-type(1) {
-    top: 1.25rem;
-    left: calc(var(--defaultMargin) + 1.25rem);
+    top: 1.375rem;
+    /* left: calc(var(--defaultMargin) + 1.375rem); */
+    left: 1.375rem;
 
     width: 15rem;
     height: 21.25rem;
@@ -32,8 +34,9 @@ export const CreateCardContainer = styled.div`
   }
 
   & img:nth-of-type(2) {
-    top: 2.5rem;
-    left: calc(var(--defaultMargin) + 2.5rem);
+    top: 2.625rem;
+    /* left: calc(var(--defaultMargin) + 2.625rem); */
+    left: 2.625rem;
 
     width: 12.5rem;
     height: 18.75rem;

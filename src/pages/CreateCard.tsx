@@ -53,7 +53,7 @@ function CreateCard() {
   return (
     <Style.Container>
       <div>
-        <div>
+        <div id="CardFrame">
           <CreateCardLayout />
         </div>
         <Style.CreateCardTitle>

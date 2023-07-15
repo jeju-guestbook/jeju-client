@@ -6,7 +6,7 @@ export const CardBottom = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: .9375rem;
+  gap: 0.9375rem;
 
   height: fit-content;
   margin: 2.1875rem 0 1.5rem 0;
@@ -85,17 +85,26 @@ export const CreateCardTitle = styled.div`
 `;
 
 export const Container = styled.div`
-  width: 100vw;
-  min-height: 100vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 22px;
+
   & div {
     position: relative;
     z-index: 3;
+  }
+
+  & #CardFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
   }
 
   #CreateCard {
