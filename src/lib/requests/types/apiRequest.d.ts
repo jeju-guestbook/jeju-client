@@ -26,10 +26,7 @@ interface CreateGuestBookReq {
 }
 
 interface CreateGuestBookRes extends ApiRequestCommon {
-  result: {
-    book_id: number;
-    img_s3_url: string;
-  };
+  result: CreatePostReq;
 }
 
 interface CreatePostReq {
@@ -39,7 +36,6 @@ interface CreatePostReq {
 interface CreatePostRes extends ApiRequestCommon {
   result: {
     gen_id: number;
-    img_s3_url: string;
   };
 }
 
