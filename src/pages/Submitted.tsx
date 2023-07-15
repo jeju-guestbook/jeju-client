@@ -11,6 +11,7 @@ import KakaoIcon from '../public/kakaoIcon.png';
 import usePostStore from '../lib/hook/store/usePostStore';
 import { SubmittedBackProps, SubmittedCardProps } from '../types/Submitted';
 import BackgroundSubmitted from '../public/Background/BackgroundSubmitted.png';
+import ImgSave from '../components/ImgSave/ImgSave';
 
 function Submitted() {
   const { imageUrl, imageFile, date, content } = usePostStore();
@@ -28,11 +29,9 @@ function Submitted() {
   };
 
   return (
-    <Style.SubmittedContainer
-      onClick={() => changeSubmitted({ isClicked, setIsClicked })}
-    >
+    <Style.SubmittedContainer>
       <div>
-        <div>
+        <div onClick={() => changeSubmitted({ isClicked, setIsClicked })}>
           {isClicked ? (
             <SubmittedCardBack {...cardBackInfo} />
           ) : (
@@ -83,6 +82,7 @@ function Submitted() {
         id="Submitted"
         className="BackgroundGradient"
       />
+      <ImgSave />
     </Style.SubmittedContainer>
   );
 }
