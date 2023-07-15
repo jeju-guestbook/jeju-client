@@ -4,7 +4,7 @@ export const BtnContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.125rem;
 
   margin-top: 1.5rem;
 `;
@@ -14,7 +14,7 @@ export const CreateCardText = styled.div`
   width: 100%;
   padding: 0 4.6875rem;
 
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.875rem;
   letter-spacing: -0.0281rem;
 `;
@@ -24,7 +24,7 @@ export const CreateCardTitle = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin: 1.1875rem 0 0.75rem 0;
+  margin: 1.1875rem 0 1.125rem 0;
 
   font-size: 1.5rem;
   line-height: 2rem;

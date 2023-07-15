@@ -1,11 +1,11 @@
-import React from 'react';
-import { LocationInputWrapDiv } from './LocationInput.style';
-import kakaoReq from '../../lib/requests/kakaoAPIRequest';
-import useKeywordSearchStore from '../../lib/hook/store/useKeywordSearchStore';
-import SearchIcon from '../icons/SearchIcon';
+import React from "react";
+import { LocationInputWrapDiv } from "./LocationInput.style";
+import kakaoReq from "../../lib/requests/kakaoAPIRequest";
+import useKeywordSearchStore from "../../lib/hook/store/useKeywordSearchStore";
+import SearchIcon from "../icons/SearchIcon";
 
 const LocationInput = () => {
-  const [value, setValue] = React.useState('');
+  const [value, setValue] = React.useState("");
   const { setKeywordSearchData } = useKeywordSearchStore();
 
   const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -22,7 +22,9 @@ const LocationInput = () => {
   return (
     <LocationInputWrapDiv>
       <label className="LocationLabel">
-        어디로 다녀오셨나요?
+        <div>
+          <span>어디를</span> <span>다녀오셨나요?</span>
+        </div>
         <SearchIcon />
         <input
           className="LocationInput"

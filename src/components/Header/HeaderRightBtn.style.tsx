@@ -8,11 +8,11 @@ export const HeaderRightButton = styled.button`
   align-items: center;
 
   position: absolute;
-  top: 1.125rem;
+  top: 1.25rem;
   right: 1.0831rem;
 
   font-family: 'Pretendard-Bold';
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
   color: #000;
 

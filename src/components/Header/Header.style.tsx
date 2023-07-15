@@ -12,13 +12,13 @@ export const HeaderIcon = styled.div`
   left: 1.0831rem;
 
   font-family: "Pretendard-Bold";
-  font-size: 1rem;
+  font-size: 1.125rem;
   text-align: center;
 `;
 
 export const HeaderText = styled.div`
   font-family: "Pretendard-Bold";
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   text-align: center;
 `;
 

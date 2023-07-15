@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LocationInputWrapDiv = styled.div`
   margin-top: 3.75rem;
@@ -8,21 +8,34 @@ export const LocationInputWrapDiv = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    gap: 1.125rem;
+    gap: 1.25rem;
+
+    font-size: 1.5rem;
+
+    & div:nth-of-type(1) {
+      display: inline-block;
+
+      & span:nth-of-type(1) {
+        font-family: "Pretendard-Bold";
+      }
+
+      & span:nth-of-type(2) {
+        font-family: "Pretendard-Regular";
+      }
+    }
   }
 
   .SearchIcon {
     position: absolute;
 
-    margin: calc(0.75rem);
-    margin-bottom: calc(0.75rem + 0.0625rem);
+    margin: 1.125rem 1.125rem 1rem 1.125rem;
   }
-
+  
   .LocationInput {
     width: 100%;
     height: 3.125rem;
 
-    padding: 1rem 1rem 1rem 2.75rem;
+    padding: 1.5rem 1.125rem 1.5rem 3.75rem;
 
     border: none;
     border-bottom: 1px solid var(--4-fill-gray-ae-inactive, #aeaeae);
@@ -31,10 +44,10 @@ export const LocationInputWrapDiv = styled.div`
 
     color: #6b6b6b;
     font-family: Pretendard;
-    font-size: 0.875rem;
+    font-size: 1.125rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 1.125rem;
+    line-height: 1.25rem;
     letter-spacing: -0.0219rem;
   }
 `;

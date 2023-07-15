@@ -7,8 +7,8 @@ export const BackDate = styled.div`
 
   color: #111;
   font-family: "Pretendard-Medium";
-  font-size: 1rem;
-  line-height: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   text-align: center;
   letter-spacing: normal;
 `;
@@ -28,7 +28,7 @@ export const BackContainer = styled.div`
 
   background-color: #fff;
 
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   line-height: 1.875rem;
   letter-spacing: -0.0281rem;
 

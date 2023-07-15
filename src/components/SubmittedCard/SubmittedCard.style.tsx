@@ -4,8 +4,8 @@ export const SubmittedFooter = styled.div`
   margin-block: 1.1875rem;
 
   font-family: "Pretendard-Medium";
-  font-size: 1rem;
-  line-height: 1.125rem;
+  font-size: 1.125rem;
+  line-height: 1.25rem;
   text-align: center;
   color: #111;
 `;
