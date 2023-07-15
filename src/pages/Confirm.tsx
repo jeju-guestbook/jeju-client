@@ -19,16 +19,17 @@ function Confirm() {
     <Style.ConfirmContainer>
       <Style.ConfirmContent>
         <img src={ConfirmImg} alt="안내 이미지" />
-
         <Style.ConfirmTitle>우표도 만들어볼까요?</Style.ConfirmTitle>
         <Style.ConfirmText>
           AI가 생성한 제주도 이야기를 읽어보아요.
           <br />
           랜덤으로 이야기가 계속 바뀐답니다!
-        </Style.ConfirmText>
+        </Style.ConfirmText>{" "}
+        <Style.ConfirmBottom>
+          <BottomBtn {...btnProps} />
+        </Style.ConfirmBottom>
       </Style.ConfirmContent>
 
-      <BottomBtn {...btnProps} />
       <img
         src={BackgroundConfirm}
         alt="background"
