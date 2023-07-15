@@ -16,7 +16,7 @@ export const BottomBtnBody = styled.div`
 
   color: #6002ee;
   font-family: 'Pretendard-SemiBold';
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   line-height: 1.625rem;
   letter-spacing: -0.0281rem;
   cursor: pointer;

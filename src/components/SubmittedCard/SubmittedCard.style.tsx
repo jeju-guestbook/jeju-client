@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SubmittedFooter = styled.div`
-  margin-block: 1.1875rem;
+  margin-block: 0.875rem;
 
   font-family: "Pretendard-Medium";
   font-size: 1.125rem;
@@ -18,9 +18,9 @@ export const SubmittedCardContainer = styled.div`
   width: 90vw;
   height: 75vh;
   max-width: 20.875rem;
-  max-height: 40rem;
+  max-height: 31.25rem;
 
-  padding: 0 1.0625rem;
+  padding: 1.0625rem 1.0625rem 0 1.0625rem;
 
   background-color: #fff;
 
@@ -29,9 +29,7 @@ export const SubmittedCardContainer = styled.div`
 
   & img {
     width: 100%;
-    height: 35rem;
-
-    margin: 1.5rem 0 0 0;
+    height: 27.375rem;
 
     border-radius: 5px;
     object-fit: cover;
