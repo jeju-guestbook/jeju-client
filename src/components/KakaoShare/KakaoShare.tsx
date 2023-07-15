@@ -1,30 +1,91 @@
-import React from 'react';
-import { KakaoShareButton } from './KakaoShare.style';
+import React, { useEffect } from 'react';
+import { KakaoShareA } from './KakaoShare.style';
+import usePostStore from '../../lib/hook/store/usePostStore';
 
 const KakaoShare = () => {
-  const onClickKakaoShare = () => {
-    console.log(window.Kakao, 'window.Kakao');
+  const { imageUrl } = usePostStore();
 
+  useEffect(() => {
     if (window.Kakao) {
       window.Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',
         content: {
-          title: document.title,
-          description: `제주도의 푸르른 풍경 속에서 눈에 띄는 감귤 나무들이 햇볕에 반짝이며
-          농장을 수놓습니다. 나무 가지에 매달린 풍성한 감귤들은 탱글탱글하게 ...`,
-          imageUrl: `${window.location.origin}/test.jpeg`,
+          title: '오늘의 디저트',
+          description: '아메리카노, 빵, 케익',
+          imageUrl:
+            'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
           link: {
-            mobileWebUrl:
-              'https://creative-empanada-b8c6f1.netlify.app/createcard/1',
-            webUrl: 'https://creative-empanada-b8c6f1.netlify.app/createcard/1',
+            mobileWebUrl: 'https://developers.kakao.com',
+            webUrl: 'https://developers.kakao.com',
           },
         },
+        itemContent: {
+          profileText: 'Kakao',
+          profileImageUrl:
+            'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          titleImageUrl:
+            'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
+          titleImageText: 'Cheese cake',
+          titleImageCategory: 'Cake',
+          items: [
+            {
+              item: 'Cake1',
+              itemOp: '1000원',
+            },
+            {
+              item: 'Cake2',
+              itemOp: '2000원',
+            },
+            {
+              item: 'Cake3',
+              itemOp: '3000원',
+            },
+            {
+              item: 'Cake4',
+              itemOp: '4000원',
+            },
+            {
+              item: 'Cake5',
+              itemOp: '5000원',
+            },
+          ],
+          sum: 'Total',
+          sumOp: '15000원',
+        },
+        social: {
+          likeCount: 10,
+          commentCount: 20,
+          sharedCount: 30,
+        },
+        buttons: [
+          {
+            title: '웹으로 이동',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            },
+          },
+          {
+            title: '앱으로 이동',
+            link: {
+              mobileWebUrl: 'https://developers.kakao.com',
+              webUrl: 'https://developers.kakao.com',
+            },
+          },
+        ],
       });
     }
-  };
+  }, []);
 
-  return <KakaoShareButton onClick={onClickKakaoShare}></KakaoShareButton>;
+  return (
+    <KakaoShareA id="kakaotalk-sharing-btn" href="javascript:;">
+      <img
+        src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+        alt="카카오톡 공유 보내기 버튼"
+      />
+    </KakaoShareA>
+  );
 };
 
 export default KakaoShare;
