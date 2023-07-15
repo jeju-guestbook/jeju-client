@@ -17,7 +17,7 @@ export const ConfirmBottom = styled.div`
 
 export const ConfirmText = styled.div`
   margin-bottom: 6.375rem;
-  
+
   text-align: center;
 `;
 
@@ -32,6 +32,7 @@ export const ConfirmTitle = styled.div`
 
 export const ConfirmContent = styled.div`
   position: relative;
+  top: -10.75rem;
   z-index: 3;
 
   width: 100vw;
@@ -39,6 +40,10 @@ export const ConfirmContent = styled.div`
   margin-top: 5.125rem;
 
   text-align: center;
+
+  & img {
+    width: 100%;
+  }
 `;
 
 export const ConfirmContainer = styled.div`

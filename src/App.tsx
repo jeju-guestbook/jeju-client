@@ -28,7 +28,7 @@ function App() {
           ></Route>
           <Route path="/addpost" element={<AddPostPage />} />
           <Route path="/createcard/:createcardId" element={<CreateCard />} />
-          <Route path="/submitted" element={<Submitted />} />
+          <Route path="/submitted/:submittedId" element={<Submitted />} />
           <Route path="/confirm" element={<Confirm />} />
         </Routes>
         {/* {showCommons(location.pathname) && <Navbar />} */}

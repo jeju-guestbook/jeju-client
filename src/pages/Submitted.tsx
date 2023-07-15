@@ -11,7 +11,10 @@ import { SubmittedBackProps, SubmittedCardProps } from '../types/Submitted';
 import BackgroundSubmitted from '../../public/Background/BackgroundSubmitted.png';
 import ImgSave from '../components/ImgSave/ImgSave';
 import KakaoShare from '../components/KakaoShare/KakaoShare';
+import { useParams } from 'react-router-dom';
+
 function Submitted() {
+  const {submittedId} = useParams()
   const { imageUrl, imageFile, date, content } = usePostStore();
   const [isClicked, setIsClicked] = useState(false);
 
