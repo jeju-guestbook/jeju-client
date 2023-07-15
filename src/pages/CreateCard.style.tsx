@@ -72,10 +72,10 @@ export const CreateCardTitle = styled.div`
   color: #404040;
 
   & #ReloadBtn {
-    width: 2.125rem;
-    height: 2.125rem;
+    width: 2.375rem;
+    height: 2.375rem;
 
-    border-radius: 1.0625rem;
+    border-radius: 1.1875rem;
 
     background-color: #b286ff;
   }
