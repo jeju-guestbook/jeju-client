@@ -4,6 +4,7 @@ import { AddPostInput, AddPostLabel } from './AddPostBtn.style';
 import { useNavigate } from 'react-router-dom';
 import useDidMountEffect from '../../lib/hook/useDidMountEffect';
 import resizeImage from '../../lib/modules/resizeImage';
+import initValue from '../../lib/const/initValue';
 
 const AddPostBtn = () => {
   const { imageUrl, imageFile, setImageFile, setImageUrl } = usePostStore();
@@ -29,8 +30,8 @@ const AddPostBtn = () => {
         name: imgFile.name,
         type: imgFile.type,
         lastModified: imgFile.lastModified,
-        x: 340,
-        y: 340,
+        x: initValue.imgSize.x,
+        y: initValue.imgSize.y,
       });
 
       setImageUrl(resizedDataUrl);

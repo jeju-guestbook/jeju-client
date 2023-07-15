@@ -1,47 +1,41 @@
-import React, { FormEventHandler, useEffect, useState } from "react";
+import React, { FormEventHandler, useEffect, useState } from 'react';
 import {
   PostContentDiv,
   PostContentForm,
   PostImgLabel,
-} from "./PostContent.style";
-import usePostStore from "../../lib/hook/store/usePostStore";
+} from './PostContent.style';
+import usePostStore from '../../lib/hook/store/usePostStore';
 
-import dayjs from "dayjs";
-import utc from "dayjs/plugin/utc";
-import timezone from "dayjs/plugin/timezone";
+import dayjs from 'dayjs';
+import utc from 'dayjs/plugin/utc';
+import timezone from 'dayjs/plugin/timezone';
 
-import DatePicker from "../icons/DatePicker";
-import resizeImage from "../../lib/modules/resizeImage";
+import DatePicker from '../icons/DatePicker';
+import resizeImage from '../../lib/modules/resizeImage';
+import initValue from '../../lib/const/initValue';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault("Asia/Seoul");
-dayjs().format("YYYY-MM-DD");
+dayjs.tz.setDefault('Asia/Seoul');
+dayjs().format('YYYY-MM-DD');
 
 const PostContent = () => {
-  const {
-    imageUrl,
-    imageFile,
-    setImageFile,
-    setImageUrl,
-    setContent,
-    setDate,
-  } = usePostStore();
-  // const inputRef = React.useRef<HTMLInputElement>(null);
+  const { imageUrl, setImageFile, setImageUrl, setContent, setDate } =
+    usePostStore();
 
   const [dateValue, setDateValue] = useState(
-    dayjs().tz().format("YYYY-MM-DD").toString()
+    dayjs().tz().format('YYYY-MM-DD').toString()
   );
 
-  const [textValue, setTextValue] = useState("");
+  const [textValue, setTextValue] = useState('');
 
   const onImgChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const imgFile = e && e.target.files && e.target.files[0];
 
-    console.log(e.target.files, "e.target.files");
+    console.log(e.target.files, 'e.target.files');
 
     if (!e.target.files || !imgFile) {
-      console.error("이미지 파일이 감지되지 않음");
+      console.error('이미지 파일이 감지되지 않음');
       return undefined;
     }
 
@@ -54,8 +48,8 @@ const PostContent = () => {
         name: imgFile.name,
         type: imgFile.type,
         lastModified: imgFile.lastModified,
-        x: 340,
-        y: 340,
+        x: initValue.imgSize.x,
+        y: initValue.imgSize.y,
       });
 
       setImageUrl(resizedDataUrl);
@@ -78,9 +72,10 @@ const PostContent = () => {
   };
 
   useEffect(() => {
-    setDate(dayjs().tz().format("YYYY-MM-DD").toString());
+    setDate(dayjs().tz().format('YYYY-MM-DD').toString());
   }, []);
 
+  // TODO: API 연동 필요
   // const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
   //   const temp1 = imageFile;
   //   const temp2 = dateValue;
@@ -100,13 +95,13 @@ const PostContent = () => {
     <PostContentDiv className="PostContent">
       <PostContentForm className="PostForm">
         <PostImgLabel className="PostImgLabel" src={imageUrl}>
-        <input
-          className="PostImgInput"
-          type="file"
-          accept="image/*"
-          id="PostImgInputId"
-          onChange={onImgChange}
-        />
+          <input
+            className="PostImgInput"
+            type="file"
+            accept="image/*"
+            id="PostImgInputId"
+            onChange={onImgChange}
+          />
         </PostImgLabel>
 
         <label className="PostDateLabel">
@@ -115,7 +110,7 @@ const PostContent = () => {
             type="date"
             value={dateValue}
             onChange={onDateChange}
-            max={dayjs().tz().format("YYYY-MM-DD").toString()}
+            max={dayjs().tz().format('YYYY-MM-DD').toString()}
           />
           <DatePicker />
         </label>

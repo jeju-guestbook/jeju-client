@@ -3,6 +3,7 @@ import usePostStore from '../../lib/hook/store/usePostStore';
 import { AddPostInput, AddPostLabel } from './AddPostFloatBtn.style';
 import { useNavigate } from 'react-router-dom';
 import resizeImage from '../../lib/modules/resizeImage';
+import initValue from '../../lib/const/initValue';
 
 const AddPostFloatBtn = () => {
   const { imageUrl, imageFile, setImageFile, setImageUrl } = usePostStore();
@@ -28,8 +29,8 @@ const AddPostFloatBtn = () => {
         name: imgFile.name,
         type: imgFile.type,
         lastModified: imgFile.lastModified,
-        x: 340,
-        y: 340,
+        x: initValue.imgSize.x,
+        y: initValue.imgSize.y,
       });
 
       setImageUrl(resizedDataUrl);
