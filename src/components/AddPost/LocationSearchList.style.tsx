@@ -8,8 +8,8 @@ export const LocationSearchListDiv = styled.div`
 
   max-height: 16.2175rem;
 
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 `;
 
 export const LocationSearchButtonWrapDiv = styled.div`
@@ -32,6 +32,7 @@ export const LocationSearchButton = styled.button`
   flex-direction: column;
 
   width: 100%;
+  height: inherit;
 
   padding: 0.44rem 2.19rem 0.25rem 2.75rem;
 
