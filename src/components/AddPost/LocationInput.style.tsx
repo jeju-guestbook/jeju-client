@@ -22,6 +22,10 @@ export const LocationInputWrapDiv = styled.div`
       & span:nth-of-type(2) {
         font-family: "Pretendard-Regular";
       }
+
+      & img {
+        width: 2.625rem;
+      }
     }
   }
 
