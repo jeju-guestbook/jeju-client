@@ -1,22 +1,22 @@
-import React, { FormEventHandler, useEffect, useState } from 'react';
+import React, { FormEventHandler, useEffect, useState } from "react";
 import {
   PostContentDiv,
   PostContentForm,
   PostImgLabel,
-} from './PostContent.style';
-import usePostStore from '../../lib/hook/store/usePostStore';
+} from "./PostContent.style";
+import usePostStore from "../../lib/hook/store/usePostStore";
 
-import dayjs from 'dayjs';
-import utc from 'dayjs/plugin/utc';
-import timezone from 'dayjs/plugin/timezone';
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
 
-import DatePicker from '../icons/DatePicker';
-import resizeImage from '../../lib/modules/resizeImage';
+import DatePicker from "../icons/DatePicker";
+import resizeImage from "../../lib/modules/resizeImage";
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-dayjs.tz.setDefault('Asia/Seoul');
-dayjs().format('YYYY-MM-DD');
+dayjs.tz.setDefault("Asia/Seoul");
+dayjs().format("YYYY-MM-DD");
 
 const PostContent = () => {
   const {
@@ -30,18 +30,18 @@ const PostContent = () => {
   // const inputRef = React.useRef<HTMLInputElement>(null);
 
   const [dateValue, setDateValue] = useState(
-    dayjs().tz().format('YYYY-MM-DD').toString()
+    dayjs().tz().format("YYYY-MM-DD").toString()
   );
 
-  const [textValue, setTextValue] = useState('');
+  const [textValue, setTextValue] = useState("");
 
   const onImgChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const imgFile = e && e.target.files && e.target.files[0];
 
-    console.log(e.target.files, 'e.target.files');
+    console.log(e.target.files, "e.target.files");
 
     if (!e.target.files || !imgFile) {
-      console.error('이미지 파일이 감지되지 않음');
+      console.error("이미지 파일이 감지되지 않음");
       return undefined;
     }
 
@@ -78,7 +78,7 @@ const PostContent = () => {
   };
 
   useEffect(() => {
-    setDate(dayjs().tz().format('YYYY-MM-DD').toString());
+    setDate(dayjs().tz().format("YYYY-MM-DD").toString());
   }, []);
 
   // const onSubmit: FormEventHandler<HTMLFormElement> = (e) => {
@@ -100,12 +100,13 @@ const PostContent = () => {
     <PostContentDiv className="PostContent">
       <PostContentForm className="PostForm">
         <PostImgLabel className="PostImgLabel" src={imageUrl}>
-          <input
-            className="PostImgInput"
-            type="file"
-            accept="image/*"
-            onChange={onImgChange}
-          />
+        <input
+          className="PostImgInput"
+          type="file"
+          accept="image/*"
+          id="PostImgInputId"
+          onChange={onImgChange}
+        />
         </PostImgLabel>
 
         <label className="PostDateLabel">
@@ -114,7 +115,7 @@ const PostContent = () => {
             type="date"
             value={dateValue}
             onChange={onDateChange}
-            max={dayjs().tz().format('YYYY-MM-DD').toString()}
+            max={dayjs().tz().format("YYYY-MM-DD").toString()}
           />
           <DatePicker />
         </label>

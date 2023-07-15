@@ -13,13 +13,13 @@ export const PostImgLabel = styled.label<{ src?: string }>`
 
   opacity: 1;
 
-  border: ${({ src }) => (src ? 'none' : '1px solid #D4CFD7')};
   border-radius: 0.3125rem;
 
-  background-image: url(${({ src }) => (src ? src : '/AddPostIcon.svg')});
+  background-image: url(${({ src }) => (src ? src : '/AddPostCamera.svg')});
   background-size: ${({ src }) => (src ? 'cover' : '3rem 3rem')};
   background-repeat: no-repeat;
   background-position: center center;
+  background-color: rgba(230, 230, 230, 1);
 
   .PostImgInput {
     opacity: 0;
@@ -80,12 +80,12 @@ export const PostContentForm = styled.form`
 
     color: #111;
     font-family: "Pretendard-Regular";
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   textarea::placeholder {
     color: #d9d9d9;
     font-family: "Pretendard-Regular";
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 `;
