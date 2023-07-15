@@ -1,1 +1,0 @@
-export const API = "https://user-app.krampoline.com/k979e4226b445a/api"
