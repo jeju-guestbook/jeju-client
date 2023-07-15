@@ -7,8 +7,8 @@ function CreateCardLayout() {
   return (
     <Style.CreateCardContainer>
       <CreateCardFrame />
-      <img src={TestImg} />
-      <img src={TestImg} />
+      <img src={''} />
+      <img src={''} />
     </Style.CreateCardContainer>
   );
 }
