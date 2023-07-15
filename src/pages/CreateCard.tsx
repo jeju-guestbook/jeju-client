@@ -103,7 +103,7 @@ function CreateCard() {
         </Style.BtnContainer>
 
         <Style.CardBottom>
-          <BottomBtn {...reloadBottom} />
+          {/* <BottomBtn {...reloadBottom} /> */}
           <BottomBtn {...saveBottom}/>
         </Style.CardBottom>
       </div>
