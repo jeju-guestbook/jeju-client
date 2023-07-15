@@ -1,4 +1,3 @@
-import CreateCardBtn from "../components/CreateCard/CreateCardBtn";
 import CreateCardLayout from "../components/CreateCard/CreateCardLayout";
 import RegenerateText from "../components/icons/RegenerateText";
 import * as Style from "./CreateCard.style";
@@ -59,8 +58,8 @@ function CreateCard() {
         <Style.CreateCardTitle>
           <span>AI 생성&nbsp;</span>
           <span>랜덤 텍스트&nbsp;</span>
-          <span>
-            <RegenerateText />
+          <span id="ReloadBtn">
+            <Reload />
           </span>
         </Style.CreateCardTitle>
         <Style.CreateCardText>{contText}</Style.CreateCardText>

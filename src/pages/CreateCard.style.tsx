@@ -65,11 +65,20 @@ export const CreateCardTitle = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin: 1.375rem 0 1.125rem 0;
+  margin: 0.9375rem 0 1.125rem 0;
 
   font-size: 1.5rem;
   line-height: 2rem;
   color: #404040;
+
+  & #ReloadBtn {
+    width: 2.125rem;
+    height: 2.125rem;
+
+    border-radius: 1.0625rem;
+
+    background-color: #b286ff;
+  }
 
   & span:first-of-type {
     font-family: "Pretendard-Bold";
@@ -105,6 +114,7 @@ export const Container = styled.div`
     align-items: center;
 
     width: 100%;
+    height: 24rem;
   }
 
   #CreateCard {

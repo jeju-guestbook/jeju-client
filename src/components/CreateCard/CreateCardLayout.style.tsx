@@ -5,7 +5,7 @@ export const CreateCardContainer = styled.div`
 
   position: relative;
 
-  height: 25.125rem;
+  height: 24rem;
 
   & svg {
     position: relative;
