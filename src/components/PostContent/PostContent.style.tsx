@@ -85,7 +85,7 @@ export const PostContentForm = styled.form`
 
   textarea::placeholder {
     color: #d9d9d9;
-    font-family: "Pretendard-Regular";
+    font-family: 'Pretendard-Regular';
     font-size: 1.125rem;
   }
 `;
