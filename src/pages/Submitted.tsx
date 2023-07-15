@@ -7,10 +7,10 @@ import SubmittedCardBack from "../components/SubmittedCard/SubmittedCardBack";
 import { changeSubmitted } from "../lib/modules/changeSubmited";
 
 import SharingIcon from '../components/icons/SharingIcon';
-import KakaoIcon from '../public/kakaoIcon.png';
+import KakaoIcon from '../../public/kakaoIcon.png';
 import usePostStore from '../lib/hook/store/usePostStore';
 import { SubmittedBackProps, SubmittedCardProps } from '../types/Submitted';
-import BackgroundSubmitted from '../public/Background/BackgroundSubmitted.png';
+import BackgroundSubmitted from '../../public/Background/BackgroundSubmitted.png';
 import ImgSave from '../components/ImgSave/ImgSave';
 function Submitted() {
   const { imageUrl, imageFile, date, content } = usePostStore();

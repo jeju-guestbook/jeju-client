@@ -3,7 +3,7 @@ import { LocationInputWrapDiv } from "./LocationInput.style";
 import kakaoReq from "../../lib/requests/kakaoAPIRequest";
 import useKeywordSearchStore from "../../lib/hook/store/useKeywordSearchStore";
 import SearchIcon from "../icons/SearchIcon";
-import Sori from "../../public/Sori.png";
+import Sori from "../../../public/Sori.png";
 
 const LocationInput = () => {
   const [value, setValue] = React.useState("");

@@ -1,7 +1,7 @@
 import * as Style from "./Confirm.style";
 
-import ConfirmImg from "../public/ConfirmImg.png";
-import BackgroundConfirm from "../public/Background/BackgroundConfirm.png";
+import ConfirmImg from "../../public/ConfirmImg.png";
+import BackgroundConfirm from "../../public/Background/BackgroundConfirm.png";
 import BottomBtn from "../components/BottomBtn/BottomBtn";
 import { BtnProps } from "../types/BtnProps";
 import { useNavigate } from "react-router-dom";

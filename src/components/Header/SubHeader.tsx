@@ -1,6 +1,6 @@
 import React from "react";
 import { SubHeaderContainer, SubHeaderPre } from "./SubHeader.style";
-import Dori from "../../public/Dori.png";
+import Dori from "../../../public/Dori.png";
 
 const SubHeader = () => {
   return (
