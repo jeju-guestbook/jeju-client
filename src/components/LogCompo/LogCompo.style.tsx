@@ -5,8 +5,12 @@ export const LogText = styled.div`
     margin-bottom: 0.375rem;
 
     font-family: "Pretendard-Medium";
-    font-size: 0.75rem;
+    font-size: 1.125rem;
     color: #6c7278;
+  }
+  
+  & div:nth-of-type(2) {
+    font-size: 1.25rem;
   }
 `;
 

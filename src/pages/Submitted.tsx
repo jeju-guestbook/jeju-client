@@ -27,6 +27,11 @@ function Submitted() {
     date: date,
   };
 
+  // const submittedBottom: BtnProps = {
+  //   content: <><SaveBtn />저장하기</>,
+  //   handler: () => {},
+  // };
+
   return (
     <Style.SubmittedContainer>
       <div>
@@ -37,6 +42,8 @@ function Submitted() {
             <SubmittedCard {...cardInfo} />
           )}
         </div>
+
+        <Style.SubmittedSubTitle>포토카드 공유하기</Style.SubmittedSubTitle>
 
         <Style.SharingBtnGroup>
           <KakaoShare />
@@ -51,6 +58,10 @@ function Submitted() {
           {/* <img src="/test.jpeg"></img> */}
         </Style.SharingBtnGroup>
       </div>
+
+      {/* <Style.SubmittedBottom>
+        <BottomBtn {...submittedBottom} />
+      </Style.SubmittedBottom> */}
 
       <img
         src={BackgroundSubmitted}

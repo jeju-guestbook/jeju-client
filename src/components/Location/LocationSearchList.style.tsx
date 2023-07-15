@@ -16,6 +16,7 @@ export const LocationSearchButtonWrapDiv = styled.div`
   position: relative;
 
   width: 100%;
+  height: 2.8125rem;
 
   display: flex;
   align-items: center;
@@ -39,7 +40,7 @@ export const LocationSearchButton = styled.button`
   .PlaceName {
     color: #6c6c6c;
     font-family: Pretendard;
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: 1rem;
@@ -48,7 +49,7 @@ export const LocationSearchButton = styled.button`
 
   color: #6c6c6c;
   font-family: Pretendard;
-  font-size: 0.625rem;
+  font-size: .75rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1rem;

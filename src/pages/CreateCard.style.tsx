@@ -1,12 +1,53 @@
 import styled from "styled-components";
 
+export const CardBottom = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: .9375rem;
+
+  height: fit-content;
+  margin: 2.1875rem 0 1.5rem 0;
+
+  & svg {
+    margin-right: 0.8125rem;
+  }
+
+  & div {
+    position: relative;
+    bottom: 0;
+
+    &:nth-child(1) path {
+      stroke: rgba(96, 2, 238, 1);
+    }
+  }
+`;
+
+export const CardSubTitle = styled.div`
+  width: 100%;
+  margin: 1.5625rem 0 1.25rem 0;
+
+  text-align: center;
+  font-family: "Pretendard-Bold";
+  font-size: 1.125rem;
+  line-height: 26px; /* 144.444% */
+  letter-spacing: -0.45px;
+`;
+
 export const BtnContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0.75rem;
+  gap: 1.125rem;
 
   margin-top: 1.5rem;
+
+  & svg,
+  & img {
+    width: 2.375rem;
+  }
 `;
 
 export const CreateCardText = styled.div`
@@ -24,7 +65,7 @@ export const CreateCardTitle = styled.div`
   justify-content: center;
   align-items: center;
 
-  margin: 1.1875rem 0 0.75rem 0;
+  margin: 1.375rem 0 1.125rem 0;
 
   font-size: 1.5rem;
   line-height: 2rem;
@@ -45,7 +86,7 @@ export const CreateCardTitle = styled.div`
 
 export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   flex-direction: column;
@@ -58,8 +99,8 @@ export const Container = styled.div`
   }
 
   #CreateCard {
-    top:-10.5rem;
+    top: -10.5rem;
 
-    transform: scaleX(-1); 
+    transform: scaleX(-1);
   }
 `;

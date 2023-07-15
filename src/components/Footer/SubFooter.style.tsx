@@ -5,5 +5,5 @@ export const SubFooterDiv = styled.div`
   justify-content: center;
   align-items: center;
 
-  padding: 1.5rem 2rem 1.125rem;
+  padding: 1.5rem 2rem 1.25rem;
 `;

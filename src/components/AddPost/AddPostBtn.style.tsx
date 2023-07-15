@@ -20,7 +20,7 @@ export const AddPostLabel = styled.label`
   color: #6002ee;
   text-align: center;
   font-family: Pretendard;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 600;
   line-height: 1.625rem;

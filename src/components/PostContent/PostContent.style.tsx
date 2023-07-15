@@ -39,7 +39,7 @@ export const PostContentForm = styled.form`
     svg {
       position: absolute;
       width: 1.17663rem;
-      height: 1.125rem;
+      height: 1.25rem;
 
       margin-top: 0.25rem;
       margin-right: 0.125rem;
