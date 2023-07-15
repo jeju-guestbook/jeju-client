@@ -11,7 +11,7 @@ export const SubmittedBottom = styled.div`
   padding-top: 0.9375rem;
 
   & svg {
-    margin-right: .8125rem;
+    margin-right: 0.8125rem;
   }
 `;
 
@@ -34,7 +34,7 @@ export const SharingBtnGroup = styled.div`
   gap: 0.9375rem;
 
   & * {
-    width: 2.125rem;
+    width: 2.375rem;
     cursor: pointer;
   }
 `;

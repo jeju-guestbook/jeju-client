@@ -1,4 +1,4 @@
 export interface BtnProps {
-    content: string;
-    handler: any;
+  content: string | React.ReactChild;
+  handler: any;
 }
