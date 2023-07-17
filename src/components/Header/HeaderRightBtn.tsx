@@ -9,7 +9,7 @@ import req from '../../lib/requests/apiRequest';
 import useLoaderStore from '../../lib/hook/store/useLoaderStore';
 
 const HeaderRightBtn = () => {
-  const { locationData, imageFile, date, content } = usePostStore();
+  const { imageFile, date, content } = usePostStore();
 
   const navigate = useNavigate();
   const location = useLocation();

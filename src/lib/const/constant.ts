@@ -91,5 +91,5 @@ export const testGuestBookList: {
 ];
 
 export const photoCardText = {
-  title: '포토카드가 도착했어요!',
+  title: '포토카드가 도착했어요! - 모다드렁',
 };

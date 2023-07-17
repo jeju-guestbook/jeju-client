@@ -1,4 +1,37 @@
-import styled from "styled-components";
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  min-height: 100vh;
+  padding-top: 1.375rem;
+
+  .ContentWrap {
+    position: relative;
+    z-index: 3;
+
+    margin-bottom: 1.875rem;
+  }
+
+  & #CardFrame {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 24rem;
+  }
+
+  #CreateCard {
+    top: -10.5rem;
+
+    transform: scaleX(-1);
+  }
+`;
 
 export const CardBottom = styled.div`
   position: relative;
@@ -30,7 +63,7 @@ export const CardSubTitle = styled.div`
   margin: 1.5625rem 0 1.25rem 0;
 
   text-align: center;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-size: 1.125rem;
   line-height: 26px; /* 144.444% */
   letter-spacing: -0.45px;
@@ -51,8 +84,18 @@ export const BtnContainer = styled.div`
 `;
 
 export const CreateCardText = styled.div`
-  min-width: 15rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  overflow: hidden;
+
+  box-sizing: content-box;
+
   width: 100%;
+  min-width: 15rem;
+  max-width: 15rem;
+
+  margin: 0 auto;
   padding: 0 4.6875rem;
 
   font-size: 1.125rem;
@@ -81,7 +124,7 @@ export const CreateCardTitle = styled.div`
   }
 
   & span:first-of-type {
-    font-family: "Pretendard-Bold";
+    font-family: 'Pretendard-Bold';
   }
 
   & span:nth-of-type(3) {
@@ -90,36 +133,5 @@ export const CreateCardTitle = styled.div`
     align-items: center;
 
     cursor: pointer;
-  }
-`;
-
-export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  width: 100vw;
-  min-height: 100vh;
-  padding-top: 22px;
-
-  & div {
-    position: relative;
-    z-index: 3;
-  }
-
-  & #CardFrame {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    width: 100%;
-    height: 24rem;
-  }
-
-  #CreateCard {
-    top: -10.5rem;
-
-    transform: scaleX(-1);
   }
 `;

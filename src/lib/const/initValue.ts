@@ -7,8 +7,8 @@ const initValue = {
   },
   mapLevel: 11,
   imgSize: {
-    x: 360,
-    y: 500,
+    x: 360 * 1.25,
+    y: 360 * 1.25,
   },
 };
 
