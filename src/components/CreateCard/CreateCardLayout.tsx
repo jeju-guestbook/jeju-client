@@ -9,7 +9,7 @@ function CreateCardLayout() {
   return (
     <Style.CreateCardContainer>
       <CreateCardFrame />
-      <img className="PostCardImg" src={imageUrl} />
+      <img className="PostCardImg" src={imageUrl || '/Hamduck.jpeg'} />
     </Style.CreateCardContainer>
   );
 }

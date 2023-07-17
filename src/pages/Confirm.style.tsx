@@ -1,33 +1,13 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const ConfirmBottom = styled.div`
-  position: relative;
+export const ConfirmContainer = styled.div`
   display: flex;
+  align-items: flex-start;
   justify-content: center;
-  align-items: center;
 
-  height: 40px;
-
-  padding-top: 0.9375rem;
-
-  & svg {
-    margin-right: 0.8125rem;
+  & #Confirm {
+    top: -2.75rem;
   }
-`;
-
-export const ConfirmText = styled.div`
-  margin-bottom: 6.375rem;
-
-  text-align: center;
-`;
-
-export const ConfirmTitle = styled.div`
-  margin-bottom: 1.375rem;
-
-  color: #6002ee;
-  font-family: "Pretendard-SemiBold";
-  font-size: 1.75rem;
-  text-align: center;
 `;
 
 export const ConfirmContent = styled.div`
@@ -43,15 +23,35 @@ export const ConfirmContent = styled.div`
 
   & img {
     width: 100%;
+    height: 156.0256vw;
   }
 `;
 
-export const ConfirmContainer = styled.div`
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
+export const ConfirmTitle = styled.div`
+  margin-bottom: 1.375rem;
 
-  & #Confirm {
-    top: -2.75rem;
+  color: #6002ee;
+  font-family: 'Pretendard-SemiBold';
+  font-size: 1.75rem;
+  text-align: center;
+`;
+
+export const ConfirmText = styled.div`
+  margin-bottom: 6.375rem;
+
+  text-align: center;
+`;
+export const ConfirmBottom = styled.div`
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 40px;
+
+  padding-top: 0.9375rem;
+
+  & svg {
+    margin-right: 0.8125rem;
   }
 `;

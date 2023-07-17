@@ -14,6 +14,7 @@ import { photoCardText } from '../lib/const/constant';
 import createCardMockUp from '../components/CreateCard/__createCardMockUp__';
 import getRandomIdx from '../lib/utils/getRandomIdx';
 import { useState } from 'react';
+import useLoaderStore from '../lib/hook/store/useLoaderStore';
 
 // 우표를 생성하는 페이지
 // 패스 파라미터로 받은 우표 id 를 통해 단건 조회 API 연동 필요
@@ -24,6 +25,7 @@ import { useState } from 'react';
 function CreateCard() {
   // const navigate = useNavigate();
   const { imageUrl, imageFile } = usePostStore();
+  const { setIsLoading } = useLoaderStore();
   const [contText, setContText] = useState(
     createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
   );
@@ -72,9 +74,14 @@ function CreateCard() {
           <span
             id="ReloadBtn"
             onClick={() => {
-              setContText(
-                createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
-              );
+              setIsLoading(true);
+
+              setTimeout(() => {
+                setContText(
+                  createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
+                );
+                setIsLoading(false);
+              }, 3000);
             }}
           >
             <Reload />

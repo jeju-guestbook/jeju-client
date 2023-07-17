@@ -35,7 +35,7 @@ function Submitted() {
 
   return (
     <Style.SubmittedContainer>
-      <div>
+      <div className="SubmittedWrap">
         <div onClick={() => changeSubmitted({ isClicked, setIsClicked })}>
           {isClicked ? (
             <SubmittedCardBack {...cardBackInfo} />
@@ -63,10 +63,6 @@ function Submitted() {
           />
         </Style.SharingBtnGroup>
       </div>
-
-      {/* <Style.SubmittedBottom>
-        <BottomBtn {...submittedBottom} />
-      </Style.SubmittedBottom> */}
 
       <img
         src="/Background/BackgroundSubmitted.png"
