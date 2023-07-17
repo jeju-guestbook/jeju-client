@@ -3,7 +3,7 @@ import { Helmet } from 'react-helmet-async';
 
 const HelemtHead = () => {
   useEffect(() => {
-    window.Kakao.init('5b01d84beebd968e79222e317bd6fd3f');
+    window.Kakao.init(import.meta.env.VITE_KAKAO_SDK_KEY);
   }, []);
 
   return (
