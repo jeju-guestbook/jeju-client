@@ -15,7 +15,7 @@ export const AddPostLabel = styled.label`
   opacity: 1;
 `;
 
-export const AddPostInput = styled.input`
+export const AddPostButton = styled.button`
   width: 3rem;
   height: 3rem;
 

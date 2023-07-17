@@ -1,13 +1,13 @@
 import React, { useEffect } from 'react';
 import usePostStore from '../../lib/hook/store/usePostStore';
-import { AddPostInput, AddPostLabel } from './AddPostFloatBtn.style';
+import { AddPostButton, AddPostLabel } from './AddPostFloatBtn.style';
 import { useNavigate } from 'react-router-dom';
 import resizeImage from '../../lib/modules/resizeImage';
 import initValue from '../../lib/const/initValue';
 
 const AddPostFloatBtn = () => {
   // const { imageUrl, imageFile, setImageFile, setImageUrl } = usePostStore();
-  const inputRef = React.useRef<HTMLInputElement>(null);
+  // const inputRef = React.useRef<HTMLInputElement>(null);
   const navigate = useNavigate();
 
   // const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -50,10 +50,10 @@ const AddPostFloatBtn = () => {
 
   return (
     <AddPostLabel>
-      <AddPostInput
-        ref={inputRef}
-        type="file"
-        accept="image/*"
+      <AddPostButton
+        // ref={inputRef}
+        // type="file"
+        // accept="image/*"
         onClick={onClick}
       />
     </AddPostLabel>
