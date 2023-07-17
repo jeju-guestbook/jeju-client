@@ -21,7 +21,7 @@ const HeaderRightBtn = () => {
     const routeType = getRouteType(location.pathname);
 
     if (routeType === 'addPost') {
-      if (!imageFile || !date || !content || !locationData)
+      if (!imageFile || !date || !content)
         return alert('모든 항목을 입력해주세요');
 
       try {
