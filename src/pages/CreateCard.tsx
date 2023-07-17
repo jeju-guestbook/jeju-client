@@ -8,6 +8,10 @@ import SharingIcon from '../components/icons/SharingIcon';
 import BottomBtn from '../components/BottomBtn/BottomBtn';
 import SaveBtn from '../components/icons/SaveBtn';
 import Reload from '../components/icons/Reload';
+import ImgSave from '../components/ImgSave/ImgSave';
+import usePostStore from '../lib/hook/store/usePostStore';
+import KakaoShare from '../components/KakaoShare/KakaoShare';
+import { photoCardText } from '../lib/const/constant';
 
 // 우표를 생성하는 페이지
 // 패스 파라미터로 받은 우표 id 를 통해 단건 조회 API 연동 필요
@@ -17,6 +21,7 @@ import Reload from '../components/icons/Reload';
 
 function CreateCard() {
   const navigate = useNavigate();
+  const { imageUrl, imageFile } = usePostStore();
 
   // const goMain: BtnProps = {
   //   content: "처음으로",
@@ -81,30 +86,11 @@ function CreateCard() {
         <Style.CardSubTitle>엽서 공유하기</Style.CardSubTitle>
 
         <Style.BtnContainer>
-          <img
-            src="/kakaoIcon.png"
-            alt="kakao Sharing"
-            onClick={() => {
-              //  <!-- 카카오 객체 못찾음 -->
-              // if (window.Kakao) {
-              //   window.Kakao.Share.createDefaultButton({
-              //     container: "#kakaotalk-sharing-btn",
-              //     objectType: "feed",
-              //     content: {
-              //       title: document.title,
-              //       description: `제주도의 푸르른 풍경 속에서 눈에 띄는 감귤 나무들이 햇볕에 반짝이며
-              //       농장을 수놓습니다. 나무 가지에 매달린 풍성한 감귤들은 탱글탱글하게 ...`,
-              //       imageUrl: `${window.location.origin}/test.jpeg`,
-              //       link: {
-              //         mobileWebUrl:
-              //           "https://creative-empanada-b8c6f1.netlify.app/createcard/1",
-              //         webUrl:
-              //           "https://creative-empanada-b8c6f1.netlify.app/createcard/1",
-              //       },
-              //     },
-              //   });
-              // }
-            }}
+          <KakaoShare
+            url={window.location.href}
+            title={photoCardText.title}
+            description={contText}
+            imageUrl={imageUrl}
           />
           <SharingIcon
             onClick={() => {
@@ -116,10 +102,12 @@ function CreateCard() {
           />
         </Style.BtnContainer>
 
-        <Style.CardBottom>
-          {/* <BottomBtn {...reloadBottom} /> */}
+        {/* <Style.CardBottom>
+          <BottomBtn {...reloadBottom} />
           <BottomBtn {...saveBottom} />
-        </Style.CardBottom>
+        </Style.CardBottom> */}
+
+        <ImgSave imageUrl={imageUrl} imageFile={imageFile} />
       </div>
 
       <img

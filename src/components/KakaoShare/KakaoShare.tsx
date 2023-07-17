@@ -1,23 +1,26 @@
 import React, { useEffect } from 'react';
 import { KakaoShareA } from './KakaoShare.style';
-import usePostStore from '../../lib/hook/store/usePostStore';
 
-const KakaoShare = () => {
-  const { imageUrl } = usePostStore();
+interface Props {
+  url: string;
+  title: string;
+  description?: string;
+  imageUrl?: string;
+}
 
+const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
   useEffect(() => {
     if (window.Kakao) {
       window.Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',
         content: {
-          title: '오늘의 디저트',
-          description: '아메리카노, 빵, 케익',
-          imageUrl:
-            'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+          title: title,
+          description: description,
+          imageUrl,
           link: {
-            mobileWebUrl: 'https://developers.kakao.com',
-            webUrl: 'https://developers.kakao.com',
+            mobileWebUrl: url,
+            webUrl: url,
           },
         },
         // itemContent: {
@@ -62,17 +65,17 @@ const KakaoShare = () => {
           {
             title: '웹으로 이동',
             link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-              webUrl: 'https://developers.kakao.com',
+              mobileWebUrl: url,
+              webUrl: url,
             },
           },
-          {
-            title: '앱으로 이동',
-            link: {
-              mobileWebUrl: 'https://developers.kakao.com',
-              webUrl: 'https://developers.kakao.com',
-            },
-          },
+          // {
+          //   title: '앱으로 이동',
+          //   link: {
+          //     mobileWebUrl: 'https://developers.kakao.com',
+          //     webUrl: 'https://developers.kakao.com',
+          //   },
+          // },
         ],
       });
     }

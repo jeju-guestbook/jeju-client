@@ -1,12 +1,16 @@
 import React from 'react';
 import { ImgSaveA } from './ImgSave.style';
-import usePostStore from '../../lib/hook/store/usePostStore';
+import SaveBtn from '../icons/SaveBtn';
 
-const ImgSave = () => {
-  const { imageUrl, imageFile } = usePostStore();
+interface Props {
+  imageUrl?: string;
+  imageFile: File | null;
+}
 
+const ImgSave = ({ imageUrl, imageFile }: Props) => {
   return (
-    <ImgSaveA href={imageUrl} download={imageFile?.name}>
+    <ImgSaveA href={imageUrl || ''} download={imageFile?.name}>
+      <SaveBtn />
       저장하기
     </ImgSaveA>
   );
