@@ -1,6 +1,5 @@
 import * as Style from './Confirm.style';
 
-import ConfirmImg from '../../public/ConfirmImg.png';
 import BackgroundConfirm from '../../public/Background/BackgroundConfirm.png';
 import BottomBtn from '../components/BottomBtn/BottomBtn';
 import { BtnProps } from '../types/BtnProps';
@@ -22,7 +21,7 @@ function Confirm() {
   return (
     <Style.ConfirmContainer>
       <Style.ConfirmContent>
-        <img src={ConfirmImg} alt="안내 이미지" />
+        <img src="/ConfirmImg.png" alt="안내 이미지" />
         <Style.ConfirmTitle>우표도 만들어볼까요?</Style.ConfirmTitle>
         <Style.ConfirmText>
           AI가 생성한 제주도 이야기를 읽어보아요.

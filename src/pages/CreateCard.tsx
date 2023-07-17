@@ -2,10 +2,8 @@ import CreateCardLayout from '../components/CreateCard/CreateCardLayout';
 import RegenerateText from '../components/icons/RegenerateText';
 import * as Style from './CreateCard.style';
 
-import BackgroundConfirm from '../../public/Background/BackgroundConfirm.png';
 import { BtnProps } from '../types/BtnProps';
 import { useNavigate } from 'react-router-dom';
-import KakaoIcon from '../../public/kakaoIcon.png';
 import SharingIcon from '../components/icons/SharingIcon';
 import BottomBtn from '../components/BottomBtn/BottomBtn';
 import SaveBtn from '../components/icons/SaveBtn';
@@ -84,7 +82,7 @@ function CreateCard() {
 
         <Style.BtnContainer>
           <img
-            src={KakaoIcon}
+            src="/kakaoIcon.png"
             alt="kakao Sharing"
             onClick={() => {
               //  <!-- 카카오 객체 못찾음 -->
@@ -125,7 +123,7 @@ function CreateCard() {
       </div>
 
       <img
-        src={BackgroundConfirm}
+        src="/Background/BackgroundConfirm.png"
         alt="background"
         id="CreateCard"
         className="BackgroundGradient"

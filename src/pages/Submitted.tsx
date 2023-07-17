@@ -8,7 +8,6 @@ import { changeSubmitted } from '../lib/modules/changeSubmited';
 import SharingIcon from '../components/icons/SharingIcon';
 import usePostStore from '../lib/hook/store/usePostStore';
 import { SubmittedBackProps, SubmittedCardProps } from '../types/Submitted';
-import BackgroundSubmitted from '../../public/Background/BackgroundSubmitted.png';
 import ImgSave from '../components/ImgSave/ImgSave';
 import KakaoShare from '../components/KakaoShare/KakaoShare';
 import { useParams } from 'react-router-dom';
@@ -64,7 +63,7 @@ function Submitted() {
       </Style.SubmittedBottom> */}
 
       <img
-        src={BackgroundSubmitted}
+        src="/Background/BackgroundSubmitted.png"
         alt="background"
         id="Submitted"
         className="BackgroundGradient"
