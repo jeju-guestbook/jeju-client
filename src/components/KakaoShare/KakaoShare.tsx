@@ -27,7 +27,9 @@ const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
         content: {
           title: title,
           description: description,
-          imageUrl,
+          imageUrl: imageUrl?.includes('base64')
+            ? 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png'
+            : imageUrl,
           link: {
             mobileWebUrl: url,
             webUrl: url,
