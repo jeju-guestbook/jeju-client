@@ -11,6 +11,16 @@ interface Props {
 const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
   useEffect(() => {
     if (window.Kakao) {
+      console.log(
+        {
+          title,
+          description,
+          imageUrl,
+          url,
+        },
+        '카카오 공유'
+      );
+
       window.Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',
