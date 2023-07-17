@@ -5,6 +5,7 @@ import showCommons from './lib/utils/showCommons';
 import Loader from './components/Loader/Loader';
 import LandingPopup from './components/LandingPopup/LandingPopup';
 import React, { Suspense } from 'react';
+import HelmetHead from './components/HelmetHead/HelmetHead';
 
 const GuestbookAll = React.lazy(() => import('./pages/GuestbookAll'));
 const Confirm = React.lazy(() => import('./pages/Confirm'));
@@ -20,72 +21,75 @@ function App() {
   const location = useLocation();
 
   return (
-    <div id="Wrapper">
-      <div id="MainContainer">
-        {showCommons(location.pathname) && <Header />}
-        <Routes>
-          <Route
-            path="/"
-            element={
-              <Suspense fallback={<></>}>
-                <MapPage />
-              </Suspense>
-            }
-          ></Route>
-          <Route
-            path="/guestbookall"
-            element={
-              <Suspense fallback={<></>}>
-                <GuestbookAll />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/addpostlocation"
-            element={
-              <Suspense fallback={<></>}>
-                <AddPostLocationPage />
-              </Suspense>
-            }
-          ></Route>
-          <Route
-            path="/addpost"
-            element={
-              <Suspense fallback={<></>}>
-                <AddPostPage />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/createcard/:createcardId"
-            element={
-              <Suspense fallback={<></>}>
-                <CreateCard />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/submitted/:submittedId"
-            element={
-              <Suspense fallback={<></>}>
-                <Submitted />
-              </Suspense>
-            }
-          />
-          <Route
-            path="/confirm"
-            element={
-              <Suspense fallback={<></>}>
-                <Confirm />
-              </Suspense>
-            }
-          />
-        </Routes>
-        {/* {showCommons(location.pathname) && <Navbar />} */}
-        <Loader />
-        <LandingPopup />
+    <>
+      <HelmetHead />
+      <div id="Wrapper">
+        <div id="MainContainer">
+          {showCommons(location.pathname) && <Header />}
+          <Routes>
+            <Route
+              path="/"
+              element={
+                <Suspense fallback={<></>}>
+                  <MapPage />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/guestbookall"
+              element={
+                <Suspense fallback={<></>}>
+                  <GuestbookAll />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/addpostlocation"
+              element={
+                <Suspense fallback={<></>}>
+                  <AddPostLocationPage />
+                </Suspense>
+              }
+            ></Route>
+            <Route
+              path="/addpost"
+              element={
+                <Suspense fallback={<></>}>
+                  <AddPostPage />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/createcard/:createcardId"
+              element={
+                <Suspense fallback={<></>}>
+                  <CreateCard />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/submitted/:submittedId"
+              element={
+                <Suspense fallback={<></>}>
+                  <Submitted />
+                </Suspense>
+              }
+            />
+            <Route
+              path="/confirm"
+              element={
+                <Suspense fallback={<></>}>
+                  <Confirm />
+                </Suspense>
+              }
+            />
+          </Routes>
+          {/* {showCommons(location.pathname) && <Navbar />} */}
+          <Loader />
+          <LandingPopup />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
