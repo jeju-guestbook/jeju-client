@@ -19,7 +19,7 @@ export const PostImgLabel = styled.label<{ src?: string }>`
   background-size: ${({ src }) => (src ? 'cover' : '3rem 3rem')};
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: rgba(230, 230, 230, 1);
+  background-color: #EFE6FD;
 
   .PostImgInput {
     opacity: 0;
