@@ -1,12 +1,11 @@
-import React from "react";
-import { LocationInputWrapDiv } from "./LocationInput.style";
-import kakaoReq from "../../lib/requests/kakaoAPIRequest";
-import useKeywordSearchStore from "../../lib/hook/store/useKeywordSearchStore";
-import SearchIcon from "../icons/SearchIcon";
-import Sori from "../../../public/Sori.png";
+import React from 'react';
+import { LocationInputWrapDiv } from './LocationInput.style';
+import kakaoReq from '../../lib/requests/kakaoAPIRequest';
+import useKeywordSearchStore from '../../lib/hook/store/useKeywordSearchStore';
+import SearchIcon from '../icons/SearchIcon';
 
 const LocationInput = () => {
-  const [value, setValue] = React.useState("");
+  const [value, setValue] = React.useState('');
   const { setKeywordSearchData } = useKeywordSearchStore();
 
   const onChange = async (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -25,7 +24,7 @@ const LocationInput = () => {
       <label className="LocationLabel">
         <div>
           <span>어디를</span> <span>다녀오셨나요?</span>
-          <img src={Sori} alt="Sori" />
+          <img src="/Sori.png" alt="Sori" />
         </div>
         <SearchIcon />
         <input

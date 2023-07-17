@@ -1,12 +1,10 @@
 import React, { MouseEventHandler } from 'react';
 import { HeaderRightButton } from './HeaderRightBtn.style';
-import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import getRouteType from '../../lib/modules/getRouteType';
 import getHeaderNextButtonText from '../../lib/modules/getHeaderNextButtonText';
-import { GuestbookAddRequest } from '../../types/GuestBookAll';
-import { axiosAddPost } from '../../lib/utils/axiosAddPost';
 import req from '../../lib/requests/apiRequest';
 import useLoaderStore from '../../lib/hook/store/useLoaderStore';
 
@@ -23,51 +21,38 @@ const HeaderRightBtn = () => {
     const routeType = getRouteType(location.pathname);
 
     if (routeType === 'addPost') {
-      const temp1 = imageFile;
-      const temp2 = date;
-      const temp3 = content;
-      const temp4 = locationData;
+      if (!imageFile || !date || !content)
+        return alert('모든 항목을 입력해주세요');
 
-      const asd = {
-        temp1,
-        temp2,
-        temp3,
-        temp4,
-      };
-      console.log(asd, 'formData');
-      if (imageFile && date && content) {
-        //  {
-        // 성공했어요
+      try {
+        setIsLoading(true);
 
-        try {
-          setIsLoading(true);
+        const result = await req.createGuestBook({
+          datetime: date,
+          image: imageFile,
+          user_text: content,
+        });
 
-          // TODO: API 호출후 성공하면 createPost 로 보내주기
-
-          if (imageFile && date && content && locationData) {
-            const result = await req.createGuestBook({
-              datetime: date,
-              image: imageFile,
-              user_text: content,
-            });
-
-            console.log(result);
-          } else {
-            alert('모든 항목을 입력해주세요');
-          }
-
-          setIsLoading(false);
-          navigate('/submitted');
-        } catch (e) {
-          setIsLoading(false);
-          navigate('/submitted');
+        if (result.data.result) {
+          navigate(`/submitted/${result.data.result.book_id}`);
         }
+
+        setIsLoading(false);
+      } catch (e) {
+        setIsLoading(false);
+
+        // API 서버가 아직 준비가 안됐으므로, 응답이 없을때 시연이 가능하도록 처리하기
+
+        navigate(`/submitted/1`);
+
+        // TODO : API 서버 준비됐을시, 실제 에러 발생 처리
+        // alert('에러가 발생했습니다');
       }
     }
   };
 
   const moveCreateCard = () => {
-    navigate('/confirm');
+    navigate(`/confirm`);
   };
 
   return (

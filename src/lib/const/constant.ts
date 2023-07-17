@@ -89,3 +89,7 @@ export const testGuestBookList: {
     user_text: '비어파티 처음 보고 엄청 놀랐었던 기억',
   },
 ];
+
+export const photoCardText = {
+  title: '포토카드가 도착했어요!',
+};
