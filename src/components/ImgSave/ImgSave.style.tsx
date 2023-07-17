@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const ImgSaveA = styled.a`
   display: flex;
@@ -14,4 +14,10 @@ export const ImgSaveA = styled.a`
 
   background-color: #efe6fd;
   border-radius: 0.3125rem;
+
+  color: #6002ee;
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  line-height: 1.625rem; /* 144.444% */
+  letter-spacing: -0.0281rem;
 `;
