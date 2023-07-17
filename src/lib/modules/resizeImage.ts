@@ -3,8 +3,8 @@ interface ResizeImageProps {
   name: string;
   type: string;
   lastModified: number;
-  x: number;
-  y: number;
+  maxWidth: number;
+  maxHeight: number;
 }
 
 const resizeImage = ({
@@ -12,8 +12,8 @@ const resizeImage = ({
   name,
   type,
   lastModified,
-  x,
-  y,
+  maxWidth,
+  maxHeight,
 }: ResizeImageProps) => {
   const resizeImg = new Image();
   resizeImg.src = src;
@@ -23,19 +23,35 @@ const resizeImage = ({
     resizedFile: File;
   }>((resolve, reject) => {
     resizeImg.onload = () => {
+      let width = resizeImg.width;
+      let height = resizeImg.height;
+
+      // 이미지 비율 유지
+      if (width > height) {
+        if (width > maxWidth) {
+          height *= maxWidth / width;
+          width = maxWidth;
+        }
+      } else {
+        if (height > maxHeight) {
+          width *= maxHeight / height;
+          height = maxHeight;
+        }
+      }
+
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
 
       if (!ctx) {
         console.error('캔버스 컨텍스트가 존재하지 않음');
         reject();
-        return undefined;
+        return;
       }
 
-      canvas.width = x;
-      canvas.height = y;
+      canvas.width = width;
+      canvas.height = height;
 
-      ctx.drawImage(resizeImg, 0, 0, x, y);
+      ctx.drawImage(resizeImg, 0, 0, width, height);
 
       const dataUrl = canvas.toDataURL(type);
       canvas.toBlob((blob) => {

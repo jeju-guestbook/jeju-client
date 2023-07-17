@@ -30,8 +30,8 @@ const AddPostBtn = () => {
         name: imgFile.name,
         type: imgFile.type,
         lastModified: imgFile.lastModified,
-        x: initValue.imgSize.x,
-        y: initValue.imgSize.y,
+        maxWidth: initValue.imgSize.x,
+        maxHeight: initValue.imgSize.y,
       });
 
       setImageUrl(resizedDataUrl);

@@ -11,16 +11,6 @@ interface Props {
 const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
   useEffect(() => {
     if (window.Kakao) {
-      console.log(
-        {
-          title,
-          description,
-          imageUrl,
-          url,
-        },
-        '카카오 공유'
-      );
-
       window.Kakao.Share.createDefaultButton({
         container: '#kakaotalk-sharing-btn',
         objectType: 'feed',
@@ -29,7 +19,7 @@ const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
           description: description,
           imageUrl:
             imageUrl?.includes('base64') || !imageUrl
-              ? 'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png'
+              ? '/Hamduck.jpeg'
               : imageUrl,
           link: {
             mobileWebUrl: url,

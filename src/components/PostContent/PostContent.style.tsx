@@ -16,10 +16,10 @@ export const PostImgLabel = styled.label<{ src?: string }>`
   border-radius: 0.3125rem;
 
   background-image: url(${({ src }) => (src ? src : '/AddPostCamera.svg')});
-  background-size: ${({ src }) => (src ? 'cover' : '3rem 3rem')};
+  background-size: ${({ src }) => (src ? 'contain' : '3rem 3rem')};
   background-repeat: no-repeat;
   background-position: center center;
-  background-color: #EFE6FD;
+  background-color: ${({ src }) => (src ? 'transparent' : '#efe6fd')};
 
   .PostImgInput {
     opacity: 0;
