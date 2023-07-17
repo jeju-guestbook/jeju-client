@@ -1,7 +1,7 @@
 import { apiInstanceClient } from './axiosClient';
 
 const req = {
-  // api/guestbook?page={page}
+  // /guestbook?page={page}
   getGuestBookList: (page: GetGuestBookListReq) => {
     const response = apiInstanceClient.request<GetGuestBookListRes>({
       url: `${import.meta.env.VITE_API_URL}/guestbook?page=${page}`,
@@ -26,7 +26,7 @@ const req = {
 
     return response;
   },
-  // /write
+  // /upload
   createPost: (data: CreatePostReq) => {
     const response = apiInstanceClient.request<CreatePostRes>({
       url: `${import.meta.env.VITE_API_URL}/upload`,

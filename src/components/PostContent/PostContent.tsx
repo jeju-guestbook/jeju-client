@@ -20,7 +20,7 @@ dayjs.tz.setDefault('Asia/Seoul');
 dayjs().format('YYYY-MM-DD');
 
 const PostContent = () => {
-  const { imageUrl, setImageFile, setImageUrl, setContent, setDate } =
+  const { imageUrl, content, setImageFile, setImageUrl, setContent, setDate } =
     usePostStore();
 
   const [dateValue, setDateValue] = useState(
@@ -118,7 +118,7 @@ const PostContent = () => {
         <textarea
           className="PostTextArea"
           placeholder="어떤 사진인지 짧은 소개와 함께 방명록을 남겨보아요"
-          value={textValue}
+          value={content}
           onChange={onTextChange}
         />
       </PostContentForm>
