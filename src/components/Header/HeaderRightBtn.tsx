@@ -1,12 +1,10 @@
 import React, { MouseEventHandler } from 'react';
 import { HeaderRightButton } from './HeaderRightBtn.style';
-import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import usePostStore from '../../lib/hook/store/usePostStore';
 import getHeaderButtonText from '../../lib/modules/getHeaderButtonText';
 import getRouteType from '../../lib/modules/getRouteType';
 import getHeaderNextButtonText from '../../lib/modules/getHeaderNextButtonText';
-import { GuestbookAddRequest } from '../../types/GuestBookAll';
-import { axiosAddPost } from '../../lib/utils/axiosAddPost';
 import req from '../../lib/requests/apiRequest';
 import useLoaderStore from '../../lib/hook/store/useLoaderStore';
 
@@ -23,18 +21,18 @@ const HeaderRightBtn = () => {
     const routeType = getRouteType(location.pathname);
 
     if (routeType === 'addPost') {
-      const temp1 = imageFile;
-      const temp2 = date;
-      const temp3 = content;
-      const temp4 = locationData;
+      // const temp1 = imageFile;
+      // const temp2 = date;
+      // const temp3 = content;
+      // const temp4 = locationData;
 
-      const asd = {
-        temp1,
-        temp2,
-        temp3,
-        temp4,
-      };
-      console.log(asd, 'formData');
+      // const asd = {
+      //   temp1,
+      //   temp2,
+      //   temp3,
+      //   temp4,
+      // };
+      // console.log(asd, 'formData');
       if (imageFile && date && content) {
         //  {
         // 성공했어요
@@ -57,17 +55,17 @@ const HeaderRightBtn = () => {
           }
 
           setIsLoading(false);
-          navigate('/submitted');
+          navigate(`/submitted/${1}`);
         } catch (e) {
           setIsLoading(false);
-          navigate('/submitted');
+          navigate(`/submitted/${1}`);
         }
       }
     }
   };
 
   const moveCreateCard = () => {
-    navigate('/confirm');
+    navigate(`/confirm`);
   };
 
   return (

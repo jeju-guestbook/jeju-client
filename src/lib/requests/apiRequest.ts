@@ -1,12 +1,10 @@
 import { apiInstanceClient } from './axiosClient';
 
-const url = 'https://user-app.krampoline.com/k979e4226b445a/api';
-
 const req = {
   // api/guestbook?page={page}
   getGuestBookList: (page: GetGuestBookListReq) => {
     const response = apiInstanceClient.request<GetGuestBookListRes>({
-      url: `${url}/guestbook?page=${page}`,
+      url: `${import.meta.env.VITE_API_URL}/guestbook?page=${page}`,
       method: 'GET',
     });
 
@@ -21,7 +19,7 @@ const req = {
     formData.append('datetime', data.datetime);
 
     const response = apiInstanceClient.request<CreateGuestBookRes>({
-      url: `${url}/write`,
+      url: `${import.meta.env.VITE_API_URL}/write`,
       method: 'POST',
       data: formData,
     });
@@ -31,7 +29,7 @@ const req = {
   // /write
   createPost: (data: CreatePostReq) => {
     const response = apiInstanceClient.request<CreatePostRes>({
-      url: `${url}/upload`,
+      url: `${import.meta.env.VITE_API_URL}/upload`,
       method: 'POST',
       data,
     });
@@ -41,7 +39,7 @@ const req = {
   // /result?gen_id={gen_id}
   getPost: (gen_id: GetPostReq) => {
     const response = apiInstanceClient.request({
-      url: `${url}/result?gen_id=${gen_id}`,
+      url: `${import.meta.env.VITE_API_URL}/result?gen_id=${gen_id}`,
       method: 'GET',
     });
 

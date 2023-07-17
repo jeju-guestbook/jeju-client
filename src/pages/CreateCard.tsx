@@ -1,15 +1,21 @@
-import CreateCardLayout from "../components/CreateCard/CreateCardLayout";
-import RegenerateText from "../components/icons/RegenerateText";
-import * as Style from "./CreateCard.style";
+import CreateCardLayout from '../components/CreateCard/CreateCardLayout';
+import RegenerateText from '../components/icons/RegenerateText';
+import * as Style from './CreateCard.style';
 
-import BackgroundConfirm from "../../public/Background/BackgroundConfirm.png";
-import { BtnProps } from "../types/BtnProps";
-import { useNavigate } from "react-router-dom";
-import KakaoIcon from "../../public/kakaoIcon.png";
-import SharingIcon from "../components/icons/SharingIcon";
-import BottomBtn from "../components/BottomBtn/BottomBtn";
-import SaveBtn from "../components/icons/SaveBtn";
-import Reload from "../components/icons/Reload";
+import BackgroundConfirm from '../../public/Background/BackgroundConfirm.png';
+import { BtnProps } from '../types/BtnProps';
+import { useNavigate } from 'react-router-dom';
+import KakaoIcon from '../../public/kakaoIcon.png';
+import SharingIcon from '../components/icons/SharingIcon';
+import BottomBtn from '../components/BottomBtn/BottomBtn';
+import SaveBtn from '../components/icons/SaveBtn';
+import Reload from '../components/icons/Reload';
+
+// 우표를 생성하는 페이지
+// 패스 파라미터로 받은 우표 id 를 통해 단건 조회 API 연동 필요
+// AI 의 텍스트 재생성 구현 필요
+// (개별 API 로 만들지 말고, 이 페이지를 접속하기전 POST API 를 재요청 후, gen_id 로 다시 GET API 요청 하기)
+// 우표 보내기시 공유 구현 필요
 
 function CreateCard() {
   const navigate = useNavigate();
@@ -27,14 +33,24 @@ function CreateCard() {
   // };
 
   const saveBottom: BtnProps = {
-    content: <><SaveBtn />저장하기</>,
+    content: (
+      <>
+        <SaveBtn />
+        저장하기
+      </>
+    ),
     handler: () => {},
   };
 
   const reloadBottom: BtnProps = {
-    content: <><Reload />다시하기</>,
-    handler: () => {}
-  }
+    content: (
+      <>
+        <Reload />
+        다시하기
+      </>
+    ),
+    handler: () => {},
+  };
 
   const contText =
     `제주도의 푸르른 풍경 속에서 눈에 띄는 감귤 나무들이 햇볕에 반짝이며
@@ -47,7 +63,7 @@ function CreateCard() {
   제주도의 감귤은 신선함을 그대로 담은 듯한 맛과 향 때문에 많은 사람들이
   좋아하며, 그 특유의 달큰한 맛은 그 어떤 과일과도 비교할 수 없는
   독특함을 자랑합니다. 따뜻한 태양 아래에서 자란 제주도의 감귤은 한 입
-  베어먹을 때마다 그 진정한 맛과 향을 선사합니다.`.substring(0, 80) + "...";
+  베어먹을 때마다 그 진정한 맛과 향을 선사합니다.`.substring(0, 80) + '...';
 
   return (
     <Style.Container>
@@ -104,7 +120,7 @@ function CreateCard() {
 
         <Style.CardBottom>
           {/* <BottomBtn {...reloadBottom} /> */}
-          <BottomBtn {...saveBottom}/>
+          <BottomBtn {...saveBottom} />
         </Style.CardBottom>
       </div>
 
