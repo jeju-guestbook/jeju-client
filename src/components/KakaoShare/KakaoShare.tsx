@@ -86,7 +86,7 @@ const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
 
   return (
     <KakaoShareA id="kakaotalk-sharing-btn" href="javascript:;">
-      <img src="/kakaoIcon.png" alt="카카오톡 공유 보내기 버튼" />
+      <img src="/kakao.png" alt="카카오톡 공유 보내기 버튼" />
     </KakaoShareA>
   );
 };

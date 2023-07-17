@@ -8,6 +8,9 @@
 // import Photo8 from "../../public/Test/KakaoTalk_20230707_101422853_04.jpg";
 // import Photo9 from "../../public/Test/KakaoTalk_20230707_101422853_05.jpg";
 
+const guestbookImgDirectory = '/Guestbook/guestbook_test_';
+const imgType = '.jpeg';
+
 export const testGuestBookList: {
   createdAt: string;
   createdBy: string;
@@ -17,77 +20,80 @@ export const testGuestBookList: {
   user_text: string;
 }[] = [
   {
-    createdAt: '2023/07/07',
+    createdAt: '2023/07/13',
     createdBy: '',
     id: 0,
-    image: '',
+    image: `${guestbookImgDirectory}1${imgType}`,
     photoCreatedAt: '',
-    user_text: '성산일출봉! 날씨 진짜 짱이다',
+    user_text: `구름톤과 함께한 붉은노을
+    힘든 일정 끝에 다정함만 남았습니다~!`,
   },
   {
     createdAt: '2023/07/07',
     createdBy: '',
     id: 0,
-    image: '',
+    image: `${guestbookImgDirectory}2${imgType}`,
     photoCreatedAt: '',
-    user_text: '감성과 공포 그 사이',
+    user_text: `바다에 새긴 구름톤 6기
+    이 순간이 기억에 오래남습니다~!`,
   },
   {
-    createdAt: '2023/07/07',
+    createdAt: '2023/07/09',
     createdBy: '',
     id: 0,
-    image: '',
+    image: `${guestbookImgDirectory}3${imgType}`,
     photoCreatedAt: '',
-    user_text: '자네...좋겠네...',
+    user_text: `가까운 미래에 이와같은 후회하지않도록
+    좀 더 미친 짓을 하자!`,
   },
   {
-    createdAt: '2023/07/07',
+    createdAt: '2023/07/11',
     createdBy: '',
     id: 0,
-    image: '',
+    image: `${guestbookImgDirectory}4${imgType}`,
     photoCreatedAt: '',
-    user_text: '스타벅스 한정 메뉴 그리고 야근',
+    user_text: `오늘 먹은 우뭇가사리 푸딩 너무 맛있었다… 내 원픽은 우도 땅콩이랑 오트!`,
   },
-  {
-    createdAt: '2023/07/07',
-    createdBy: '',
-    id: 0,
-    image: '',
-    photoCreatedAt: '',
-    user_text: '아이스크림 파티~~~~~너무너무 잘먹었습니다',
-  },
-  {
-    createdAt: '2023/07/07',
-    createdBy: '',
-    id: 0,
-    image: '',
-    photoCreatedAt: '',
-    user_text: '제주도는 스타벅스도 뭔가 다른 느낌',
-  },
-  {
-    createdAt: '2023/07/07',
-    createdBy: '',
-    id: 0,
-    image: '',
-    photoCreatedAt: '',
-    user_text: '뭔데 왜  왜 또 큰데',
-  },
-  {
-    createdAt: '2023/07/06',
-    createdBy: '',
-    id: 0,
-    image: '',
-    photoCreatedAt: '',
-    user_text: '비어파티! 몇번이나 왔다갔다 한 지 모르겠다',
-  },
-  {
-    createdAt: '2023/07/07',
-    createdBy: '',
-    id: 0,
-    image: '',
-    photoCreatedAt: '',
-    user_text: '비어파티 처음 보고 엄청 놀랐었던 기억',
-  },
+  // {
+  //   createdAt: '2023/07/07',
+  //   createdBy: '',
+  //   id: 0,
+  //   image: '/Guestbook/guestbook_test_1.jpeg',
+  //   photoCreatedAt: '',
+  //   user_text: '아이스크림 파티~~~~~너무너무 잘먹었습니다',
+  // },
+  // {
+  //   createdAt: '2023/07/07',
+  //   createdBy: '',
+  //   id: 0,
+  //   image: '/Guestbook/guestbook_test_1.jpeg',
+  //   photoCreatedAt: '',
+  //   user_text: '제주도는 스타벅스도 뭔가 다른 느낌',
+  // },
+  // {
+  //   createdAt: '2023/07/07',
+  //   createdBy: '',
+  //   id: 0,
+  //   image: '/Guestbook/guestbook_test_1.jpeg',
+  //   photoCreatedAt: '',
+  //   user_text: '뭔데 왜  왜 또 큰데',
+  // },
+  // {
+  //   createdAt: '2023/07/06',
+  //   createdBy: '',
+  //   id: 0,
+  //   image: '/Guestbook/guestbook_test_1.jpeg',
+  //   photoCreatedAt: '',
+  //   user_text: '비어파티! 몇번이나 왔다갔다 한 지 모르겠다',
+  // },
+  // {
+  //   createdAt: '2023/07/07',
+  //   createdBy: '',
+  //   id: 0,
+  //   image: '/Guestbook/guestbook_test_1.jpeg',
+  //   photoCreatedAt: '',
+  //   user_text: '비어파티 처음 보고 엄청 놀랐었던 기억',
+  // },
 ];
 
 export const photoCardText = {
