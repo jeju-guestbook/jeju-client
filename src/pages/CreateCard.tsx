@@ -10,10 +10,10 @@ import Reload from '../components/icons/Reload';
 import ImgSave from '../components/ImgSave/ImgSave';
 import usePostStore from '../lib/hook/store/usePostStore';
 import KakaoShare from '../components/KakaoShare/KakaoShare';
-import { photoCardText } from '../lib/const/constant';
+import { postText } from '../lib/const/constant';
 import createCardMockUp from '../components/CreateCard/__createCardMockUp__';
 import getRandomIdx from '../lib/utils/getRandomIdx';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import useLoaderStore from '../lib/hook/store/useLoaderStore';
 
 // 우표를 생성하는 페이지
@@ -24,7 +24,8 @@ import useLoaderStore from '../lib/hook/store/useLoaderStore';
 
 function CreateCard() {
   // const navigate = useNavigate();
-  const { imageUrl, imageFile } = usePostStore();
+  // TODO : 우표 페이지를 위한 스토어 분리는 필요하지만, 시간이 없어서 ,,,
+  const { imageUrl, imageFile, setContent } = usePostStore();
   const { setIsLoading } = useLoaderStore();
   const [contText, setContText] = useState(
     createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
@@ -62,6 +63,10 @@ function CreateCard() {
     handler: () => {},
   };
 
+  useEffect(() => {
+    setContent(contText);
+  }, [contText]);
+
   return (
     <Style.Container>
       <div className="ContentWrap">
@@ -94,7 +99,7 @@ function CreateCard() {
         <Style.BtnContainer>
           <KakaoShare
             url={window.location.href}
-            title={photoCardText.title}
+            title={postText.title}
             description={contText}
             imageUrl={imageUrl}
           />

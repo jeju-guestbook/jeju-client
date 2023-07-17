@@ -93,3 +93,7 @@ export const testGuestBookList: {
 export const photoCardText = {
   title: '포토카드가 도착했어요! - 모다드렁',
 };
+
+export const postText = {
+  title: '우표가 도착했어요! - 모다드렁',
+};

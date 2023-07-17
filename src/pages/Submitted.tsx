@@ -19,6 +19,7 @@ import { photoCardText } from '../lib/const/constant';
 
 function Submitted() {
   const { submittedId } = useParams();
+  // TODO : 엽서를 위한 스토어 분리는 필요하지만, 시간이 없어서,,,
   const { imageUrl, imageFile, date, content } = usePostStore();
   const [isClicked, setIsClicked] = useState(false);
 
