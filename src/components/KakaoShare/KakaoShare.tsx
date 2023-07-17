@@ -19,7 +19,7 @@ const KakaoShare = ({ url, title, description, imageUrl }: Props) => {
           description: description,
           imageUrl:
             imageUrl?.includes('base64') || !imageUrl
-              ? '/Hamduck.jpeg'
+              ? `${window.location.origin}/Hamduck.jpeg`
               : imageUrl,
           link: {
             mobileWebUrl: url,
