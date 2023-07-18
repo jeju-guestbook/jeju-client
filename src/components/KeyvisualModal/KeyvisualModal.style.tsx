@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const LandingPopupDiv = styled.div`
+export const KeyvisualModalDiv = styled.div`
   position: fixed;
   top: 0;
   z-index: 9999;

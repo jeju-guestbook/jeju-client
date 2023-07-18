@@ -3,7 +3,7 @@ import Header from './components/Header/Header';
 // import Navbar from "./components/Navbar/Navbar";
 import showCommons from './lib/utils/showCommons';
 import Loader from './components/Loader/Loader';
-import LandingPopup from './components/LandingPopup/LandingPopup';
+import LandingPopup from './components/KeyvisualModal/KeyvisualModal';
 import React, { Suspense } from 'react';
 import HelmetHead from './components/HelmetHead/HelmetHead';
 
