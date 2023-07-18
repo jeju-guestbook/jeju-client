@@ -76,11 +76,6 @@ export const BtnContainer = styled.div`
   gap: 1.125rem;
 
   margin-top: 1.5rem;
-
-  & svg,
-  & img {
-    width: 2.375rem;
-  }
 `;
 
 export const CreateCardText = styled.div`

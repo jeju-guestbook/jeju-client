@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const SubmittedBottom = styled.div`
   position: relative;
@@ -20,7 +20,7 @@ export const SubmittedSubTitle = styled.div`
   margin: 1.5625rem 0 1.25rem 0;
 
   text-align: center;
-  font-family: "Pretendard-Bold";
+  font-family: 'Pretendard-Bold';
   font-size: 1.125rem;
   line-height: 26px; /* 144.444% */
   letter-spacing: -0.45px;
@@ -32,11 +32,6 @@ export const SharingBtnGroup = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0.9375rem;
-
-  & * {
-    width: 2.375rem;
-    cursor: pointer;
-  }
 `;
 
 export const SubmittedContainer = styled.div`

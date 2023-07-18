@@ -12,6 +12,7 @@ import ImgSave from '../components/ImgSave/ImgSave';
 import KakaoShare from '../components/KakaoShare/KakaoShare';
 import { useParams } from 'react-router-dom';
 import { photoCardText } from '../lib/const/constant';
+import NativeShare from '../components/NativeShare/NativeShare';
 
 // 제출 완료 이후, 이 페이지를 공유하게 되면 해당 카드의 단건조회 도 필요하므로
 // API 가 추가로 필요해짐
@@ -54,14 +55,7 @@ function Submitted() {
             description={content}
             imageUrl={imageUrl}
           />
-          <SharingIcon
-            onClick={() => {
-              window.navigator.share({
-                title: document.title,
-                url: window.location.href,
-              });
-            }}
-          />
+          <NativeShare />
         </Style.SharingBtnGroup>
       </div>
 

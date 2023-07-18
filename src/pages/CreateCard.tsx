@@ -15,6 +15,7 @@ import createCardMockUp from '../components/CreateCard/__createCardMockUp__';
 import getRandomIdx from '../lib/utils/getRandomIdx';
 import { useEffect, useState } from 'react';
 import useLoaderStore from '../lib/hook/store/useLoaderStore';
+import NativeShare from '../components/NativeShare/NativeShare';
 
 // 우표를 생성하는 페이지
 // 패스 파라미터로 받은 우표 id 를 통해 단건 조회 API 연동 필요
@@ -103,14 +104,7 @@ function CreateCard() {
             description={contText}
             imageUrl={imageUrl}
           />
-          <SharingIcon
-            onClick={() => {
-              window.navigator.share({
-                title: document.title,
-                url: window.location.href,
-              });
-            }}
-          />
+          <NativeShare />
         </Style.BtnContainer>
 
         {/* <Style.CardBottom>

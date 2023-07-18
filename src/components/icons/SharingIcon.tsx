@@ -1,6 +1,6 @@
 import React from 'react';
 
-function SharingIcon(props: { onClick: () => void }) {
+function SharingIcon(props: { onClick?: () => void }) {
   return (
     <svg
       viewBox="0 0 34 34"
