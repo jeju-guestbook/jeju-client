@@ -1,21 +1,14 @@
 import CreateCardLayout from '../components/CreateCard/CreateCardLayout';
-// import RegenerateText from '../components/icons/RegenerateText';
 import * as Style from './CreateCard.style';
 
-import { BtnProps } from '../types/BtnProps';
-import SharingIcon from '../components/icons/SharingIcon';
-// import BottomBtn from '../components/BottomBtn/BottomBtn';
-import SaveBtn from '../components/icons/SaveBtn';
-import Reload from '../components/icons/Reload';
 import ImgSave from '../components/ImgSave/ImgSave';
 import usePostStore from '../lib/hook/store/usePostStore';
 import KakaoShare from '../components/KakaoShare/KakaoShare';
 import { postText } from '../lib/const/constant';
-import createCardMockUp from '../components/CreateCard/__createCardMockUp__';
-import getRandomIdx from '../lib/utils/getRandomIdx';
-import { useEffect, useState } from 'react';
-import useLoaderStore from '../lib/hook/store/useLoaderStore';
+import { useEffect } from 'react';
 import NativeShare from '../components/NativeShare/NativeShare';
+import useAITextStore from '../lib/hook/store/useAITextStore';
+import TextRegenerate from '../components/TextRegenerate/TextRegenerate';
 
 // 우표를 생성하는 페이지
 // 패스 파라미터로 받은 우표 id 를 통해 단건 조회 API 연동 필요
@@ -24,49 +17,13 @@ import NativeShare from '../components/NativeShare/NativeShare';
 // 우표 보내기시 공유 구현 필요
 
 function CreateCard() {
-  // const navigate = useNavigate();
   // TODO : 우표 페이지를 위한 스토어 분리는 필요하지만, 시간이 없어서 ,,,
   const { imageUrl, imageFile, setContent } = usePostStore();
-  const { setIsLoading } = useLoaderStore();
-  const [contText, setContText] = useState(
-    createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
-  );
-
-  // const goMain: BtnProps = {
-  //   content: "처음으로",
-  //   handler: () => {
-  //     navigate("/");
-  //   },
-  // };
-
-  // const sharingCard: BtnProps = {
-  //   content: "우표 보내기",
-  //   handler: () => {},
-  // };
-
-  const saveBottom: BtnProps = {
-    content: (
-      <>
-        <SaveBtn />
-        저장하기
-      </>
-    ),
-    handler: () => {},
-  };
-
-  const reloadBottom: BtnProps = {
-    content: (
-      <>
-        <Reload />
-        다시하기
-      </>
-    ),
-    handler: () => {},
-  };
+  const { aiText } = useAITextStore();
 
   useEffect(() => {
-    setContent(contText);
-  }, [contText]);
+    setContent(aiText);
+  }, [aiText]);
 
   return (
     <Style.Container>
@@ -77,23 +34,9 @@ function CreateCard() {
         <Style.CreateCardTitle>
           <span>AI 생성&nbsp;</span>
           <span>랜덤 텍스트&nbsp;</span>
-          <span
-            id="ReloadBtn"
-            onClick={() => {
-              setIsLoading(true);
-
-              setTimeout(() => {
-                setContText(
-                  createCardMockUp.AIText[getRandomIdx(createCardMockUp.AIText)]
-                );
-                setIsLoading(false);
-              }, 3000);
-            }}
-          >
-            <Reload />
-          </span>
+          <TextRegenerate />
         </Style.CreateCardTitle>
-        <Style.CreateCardText>{contText}</Style.CreateCardText>
+        <Style.CreateCardText>{aiText}</Style.CreateCardText>
 
         <Style.CardSubTitle>엽서 공유하기</Style.CardSubTitle>
 
@@ -101,16 +44,11 @@ function CreateCard() {
           <KakaoShare
             url={window.location.href}
             title={postText.title}
-            description={contText}
+            description={aiText}
             imageUrl={imageUrl}
           />
           <NativeShare />
         </Style.BtnContainer>
-
-        {/* <Style.CardBottom>
-          <BottomBtn {...reloadBottom} />
-          <BottomBtn {...saveBottom} />
-        </Style.CardBottom> */}
 
         <ImgSave imageUrl={imageUrl} imageFile={imageFile} />
       </div>

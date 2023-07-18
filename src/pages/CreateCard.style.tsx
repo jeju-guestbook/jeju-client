@@ -109,15 +109,6 @@ export const CreateCardTitle = styled.div`
   line-height: 2rem;
   color: #404040;
 
-  & #ReloadBtn {
-    width: 2.375rem;
-    height: 2.375rem;
-
-    border-radius: 1.1875rem;
-
-    background-color: #b286ff;
-  }
-
   & span:first-of-type {
     font-family: 'Pretendard-Bold';
   }

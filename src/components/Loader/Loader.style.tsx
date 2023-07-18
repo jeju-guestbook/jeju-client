@@ -91,15 +91,16 @@ export const LoaderDiv = styled.div`
     animation: ${LoaderAnimation} 1.2s 0s infinite ease-in-out;
   }
   .Loader > div {
-    background-color: #fff;
-    width: 4px;
-    height: 35px;
-    border-radius: 2px;
-    margin: 2px;
-    -webkit-animation-fill-mode: both;
-    animation-fill-mode: both;
     position: absolute;
     width: 5px;
     height: 15px;
+
+    margin: 2px;
+
+    border-radius: 2px;
+    background-color: #fff;
+
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
   }
 `;
